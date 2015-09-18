@@ -1,0 +1,216 @@
+<h3 class="version-number">Version 5.0.8.1 StarPath (12th September 2015)</h3>
+<div class="newfeature"><strong style="font-weight:700">BUGFIX</strong></div>
+<ul>
+	<li>Fixed a bug where images could not be loaded from relative paths like "../../".  Slider was not working at all, or printed many missing images Error in Console log.</li>		
+</ul>
+
+<h3 class="version-number">Version 5.0.8 StarPath (11th September 2015)</h3>
+<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+<ul>
+	<li>FaceBook API 2.4 support</li>	
+	<li>Added Disable Force FullWidth for FullScreen Slider option , to be able to set FullScreen Slider floated horizontal.  fullScreenAutoWidth:"on" to disable ful width forcing on FullSceen Layout</li>
+</ul>
+
+<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+<ul>
+	<li>Added a new 5 sec Rule which will skip Lazy Loading and Overall Loading processes in case no Answers comes from Server, and process the Slider further</li>
+	<li>Added a new Warning in case SSL Certificate is old or not any more active</li>
+</ul>
+
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>	
+	<li>Fixed a bug where Static Images with Links in lazy Load mode was not showing up correctly</li>
+	<li>Fixed a bug where Layers were flashing or not visible at all in "Show Layer on Slider Hover" mode</li>	
+	<li>Fixed FaceBook Stream Issues due Api Changes.</li>
+	<li>Fixed a bug where Video Poster Images from HTTPS Pages could not be loaded well</li>
+	<li>Fixed a missing closing Tag in HTML5 Video elements which broke IE11</li>
+	<li>Fixed an issue where Mobile Sliders stucked when Video "autoplay" was enabled</li>
+	<li>Fixed Static Layer Position problems if Outer Left Navigation was enabled</li>
+</ul>
+
+
+<h3 class="version-number">Version 5.0.7 StarPath (5th September 2015)</h3>
+
+<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+<ul>
+	<li>Now First Slide can be always the same (Alternative First Slide) even if the rest order of slides are Randomzied</li>		
+</ul>
+
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>	
+	<li>Lazy Loading Fixes. Due an internal failure, none of the Lazy Loading option was working. Single, Smart and Full Lazy Loading are available again.</li>
+	<li>Fixed a bug where HTML5 Cover Videos in IE did not really cover the slider.</li>	
+</ul>
+
+
+<h3 class="version-number">Version 5.0.6 StarPath (2nd September 2015)</h3>
+<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+<ul>
+	<li>Added New Layer Scale mode "Cover" and "Stretch" to be able to scale Layer images proportional also over the Layer grid or over the slide</li>	
+</ul>
+
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>
+	<li>Fixed Uncaught TypeError: Cannot read property 'innerHTML' of null</li>
+	<li>Fixed issue with 2d rotation resulting in styles not written properly on layer</li>
+	<li>Fixed issue where YouTube videos could not be loaded on https origins.</li>
+	<li>Fixed an issue where Next/Previous Slide Links from Full Slide Link was not processing well</li>
+	<li>Fixed text-align always beeing left</li>	
+</ul>
+
+
+<h3 class="version-number">Version 5.0.5 StarPath (27th August 2015)</h3>
+<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+<ul>
+	<li>Added "Disable Browser Blur/Focus behavior" option to not stop the Slider in case the broswer tab has been blurred</li>				
+	<li>Added revaddcallback() Method to add Call Back to i.e. the Parallax Module. See Documentation for further instructions</li>
+	<li>Added revgetparallaxproc() Method to get the current scroll percentage</li>
+	<li>Added Maximum Width option to Slider that are set to Slide Layout - Auto</li>	
+</ul>
+
+<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+<ul>			
+	<li>Removed option Hide Controls for Vimeo Video Layer as this is not supported by Vimeo</li>			
+</ul>
+
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>
+	<li>Fixed Next Slide on Focus bug</li>	
+	<li>Fixed RTL Layer Aligns on Frontend. Elements now showing up in the Correct position on RTL Direction also</li>
+	<li>Fixed a bug where files relative with special chars under subdomain could not be loaded</li>	
+	<li>Fixes the 1px Gap on the left side at some fullscreen and fullwidth Sliders</li>		
+	<li>Fixed a bug where Responsive Videos on alternative Layer Grids had only a dimension of 100x100px</li>
+	<li>Fixed a bug where Videos not act Responsive in some situation</li>
+	<li>Fixed a bug where Parallax Start Position jumps if Site is scrolled at load</li>			
+	<li>Fixed JetPack related bugs for compatibility</li>
+	<li>Fixed an issue where media files with Parameter attached in file name were not loaded in the Slider</li>			
+	<li>Fixed issues if Slider is loaded through ajax</li>
+	<li>Fixed issues where the Slider did not show up under certain circumstances</li>
+</ul>
+
+
+
+<h3 class="version-number">Version 5.0.4 StarPath (12th August 2015)</h3>
+
+<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+<ul>
+	<li>Added new Slide Transition - Slide "remove" which is the opposite transition of Slide "over"</li>
+	<li>Added start volume for Videos.</li>		
+</ul>
+
+
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>
+	<li>Shuffle Mode fixed</li>
+	<li>Fixed a bug where files could not be loaded from Relative Path in HTTPS enviroment</li>
+	<li>Fixed a bug where muted YouTube video still made a sound for 0.1ms</li>
+	<li>Fixed a bug where Slider with Slide Link were not loaded well if no layers were added to the slide</li>
+</ul>
+
+
+<h3 class="version-number">Version 5.0.3 StarPath (11th August 2015)</h3>
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>
+	<li>Fixed a bug where layer would not fade out of the stage.</li>
+</ul>
+
+	
+<h3 class="version-number">Version 5.0.2 StarPath (8th August 2015)</h3>
+<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+<ul>
+	<li>Added jQuery 2.1.4 and 1.11.3 Support</li>
+</ul>
+
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>
+	<li>Fixed a bug where if Min Height was set, the Slider was broken.</li>
+	<li>Fixed a bug where Slide Links did not work without existing layers.</li>		
+	<li>Fixed a Bug where Images with special Char Names were not loaded.</li>
+	<li>Fixed a bug where PunchFont Fallbacks are printed in the content not source</li>
+	<li>Fixed a bug where PunchFonts could not be edited in Essential Grid if version 5.0+ of Slider Revolution is installed</li>
+</ul>
+
+
+<h3 class="version-number">Version 5.0.1 StarPath (7th August 2015)</h3>
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>
+	<li>Full Slide Link was not available after update on 5.0.0. Sizing issue is fixed now.</li>
+</ul>
+
+<h3 class="version-number">Version 5.0 StarPath (6th August 2015)</h3>
+
+<div class="newfeature"><strong style="font-weight:700">The Technology</strong></div>
+Our premise is "less is more" and that is reflected in the structure of our components. In order to incorporate so much functionality into our plugins, we make sure everything is build as modular as possible.
+<ul>
+<li>Fully Responsive & Mobile Specific Features</li>
+<li>jQuery 1.7 - jQuery 2.x Supported</li>
+<li>Lightning Fast Greensock Animation Engine</li>
+<li>Powerful API functions</li>
+<li>Smart Font Loading</li>
+</ul>
+<div class="newfeature"><strong style="font-weight:700">General Options</strong></div>
+We want Revolution Slider to be able to fulfill all slide based roles along with special functionality like carousels and hero blocks. If you can‘t find a specific feature, feel free to ask us!
+<ul>
+<li>All Sizes Possible (Full Responsive + Revolutionary 4 Level Advanced Sizes)</li>
+<li>Hero, Carousel and Classic Slider Features</li>
+<li>Fullwidth, Fullscreen, Auto Responsive Slider sizes</li>
+<li>Unlimited Slider per page</li>
+<li>Image BG Cover, Contain, Tiling, Alignment, etc.</li>
+<li>Simple and Advanced Lazy Loading for Quicker and SEO Optimized Slider Start</li>
+<li>Link and Actions on Slides</li>
+<li>Parallax Effects, full customizeable, combined with Ken Burns and other effects (Mouse / Scroll controlled)</li>
+<li>Improved Light weight Ken Burns Effects (easier & faster)</li>
+<li>Word Premiere for Advacned Action Building</li>
+<li>Build your Social Stream supported Bulk Slider</li>
+<li>Viewport based Slide Loading and Progress</li>
+</ul>
+<div class="newfeature"><strong style="font-weight:700">Layer Capabilities</strong></div>
+Layers have evolved from simple layers to become powerful scene building tools!<br/>Drag and Drop, Customize & Animate your way to your perfect slider.
+<ul>
+<li>Huge Number of Possible Transitions</li>
+<li>Create your custom animations</li>
+<li>Set Start / End Time,  Speed, Ease and Effects of any Layers</li>
+<li>Show/hide layers on Slider Effects, Events, Actions</li>
+<li>Add Unlimited Number of Layers</li>
+<li>YouTube, Vimeo, Self-Hosted HTML5 Videos, Shapes, Buttons, Predefined Buttons as Layer</li>
+<li>Set actions and links per Layers</li>
+<li>Combine Actions due different Layers and slides</li>
+<li>Option to Link to a Specific Slide via Layer</li>
+<li>Toggle Animation, Classes, video functions via Layers</li>
+<li>Variable Layer Image Sizes, full responsive and/or Device Size based</li>
+<lI>Design your Layers for different Device sizes after your needs</li>
+<li>Option to Hide Layers on Any Devices</li>
+</ul>
+<div class="newfeature"><strong style="font-weight:700">Slider Navigation</strong></div>
+We have implemented almost all navigation types you can think of, which can be aligned anywhere on the stage.<br/>Be in full control with Slider Revolution Navigation!
+<ul>
+<li>Bullet, Button, Tabs and Thumbnail Navigation, single or mixed mode. Any position like outter,inner, aligned etc.</li>
+<li>Left/Right, Top/Bottom Mouse Scroll events.</li> 
+<li>Vertical/Horizontal Keyboard actions</li>
+<li>Mobile Touch Enabled (Optional)</li>
+<li>Drag and Pull Carousel Feature</li>
+<li>"Stop Slide Timer on Hover" Function</li>
+<li>Auto-Hiding of Navigation with Delay Option</li>
+<li>Optional Countdown Timer Line</li>
+<li>Set Position, color, size of Time Line</li>
+<li>Set Size, visibility, amount and behaviour of Thumbs, Tabs, Bullets, Arrows</li>
+<li>Hide / Enable Navigation on Mobile Devices</li>
+<li>Keyboard Navigation</li>
+<li>Fancy Navigation Skins with Slider Preview</li>
+</ul>
+<div class="newfeature"><strong style="font-weight:700">Video Features</strong></div>
+<ul>
+<li>AutoPlay - Always, only first time, skip first time, wait for action</li>
+<li>Stop video on Blur, Play Video only in ViewPort</li>
+<li>Rewind, or keep current progress time</li>
+<li>Set Star and End time</li>
+<li>Loop, Loop and Progress Slide</li>
+<li>Fullscreen, fullwidth, boxed</li>
+<li>Navigation features</li>
+<li>Action based controll (due other layers)</li>
+<li>New Video API, Events and Methods to controll media outside of the Slider</li>
+</ul>
+
+<div class="newfeature"><strong style="font-weight:700">Get Involved!</strong></div>
+Is there a feature you would like to see?<br>We will go through all your feedback weekly and pick the most requested features to be included in a future update!<br/>
+<a href="http://codecanyon.net/user/themepunch#contact">Contact us via our Profile Form</a><br/><br/><br/>

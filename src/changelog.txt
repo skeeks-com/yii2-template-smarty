@@ -1,0 +1,68 @@
+@Version 	1.1.0
+@Date		Monday, September 14, 2015
+@Author		Dorin Grigoras
+	* New: Revolution Slider (RS) Plugin V5.0.8 (changes: added assets/plugins/slider.revolution.v5)
+	* New: 32 Revolution Slider Examples (changes: start.html, added: assets/images/demo/rs5/)
+	* New: RS Page - Carousel Highlight (added: rs-1.html)
+	* New: RS Page - Carousel Instagram (added: rs-2.html)
+	* New: RS Page - Carousel Media (added: rs-3.html)
+	* New: RS Page - Carousel Classic(added: rs-4.html)
+	* New: RS Page - Carousel Showcase (added: rs-5.html)
+	* New: RS Page - Carousel Photography (added: rs-6.html)
+	* New: RS Page - Rotating Words (added: rs-7.html)
+	* New: RS Page - Big Bold (added: rs-8.html)
+	* New: RS Page - Slider Fashion (added: rs-9.html)
+	* New: RS Page - Slider Gym (added: rs-10.html)
+	* New: RS Page - Slider Restaurant (added: rs-11.html)
+	* New: RS Page - Slider Product Dark (added: rs-12.html)
+	* New: RS Page - SliderProduct Light (added: rs-13.html)
+	* New: RS Page - Slider Classic (added: rs-14.html)
+	* New: RS Page - Gallery Light (added: rs-15.html)
+	* New: RS Page - Gallery Dark (added: rs-16.html)
+	* New: RS Page - Slider Fancy Text (added: rs-17.html)
+	* New: RS Page - Slider Highlight (added: rs-18.html)
+	* New: RS Page - Slider Media (added: rs-19.html)
+	* New: RS Page - Slider News (added: rs-20.html)
+	* New: RS Page - Slider Vimeo (added: rs-21.html)
+	* New: RS Page - Slider Youtube (added: rs-22.html)
+	* New: RS Page - Slider Travel (added: rs-23.html)
+	* New: RS Page - Hero Image (added: rs-24.html)
+	* New: RS Page - Hero News (added: rs-25.html)
+	* New: RS Page - Hero Newsletter (added: rs-26.html)
+	* New: RS Page - Hero Search (added: rs-27.html)
+	* New: RS Page - Hero Sports (added: rs-28.html)
+	* New: RS Page - Hero Vimeo (added: rs-29.html)
+	* New: RS Page - Hero Youtube (added: rs-30.html)
+	* New: RS Page - Premium Content Zoom (added: rs-31.html)
+	* New: RS Page - Premium Food Carousel (added: rs-32.html)
+	* New: Hover Buttons [shortcode-buttons-2.html] (changes: assets/css/color_scheme/*, assets/css/plugin-hover-buttons.css, assets/css/layout-dark.css)
+	* Update: Fontawesome to V4.4.0 (changes: assets/css/essentials.css , assets/fonts/fontawesome-* - on admin too)
+
+@Version 	1.0.2
+@Date		Monday, September 07, 2015
+@Author		Dorin Grigoras
+	* New: About Us - Layout 5 (changes: added page-about-us-5.html)
+	* New: Documentation more info (demo files, google fonts)
+	* New: optional css file to rewite the default fonts(added: assets/css/_layout-font-rewrite.css)
+	* New: Parallax enabled by default on mobile devices (changes: assets/css/essentials.css)
+	* Fix: RTL Sliders/Carousels (changes: assets/css/layout-RTL.css)
+	* Fix: header-side container width for < 1600px resolution (changes: assets/css/layout.css)
+
+
+
+@Version 	1.0.1
+@Date		Thursday, September 03, 2015
+@Author		Dorin Grigoras
+	* New: Documentation more info
+	* New: admin fullcalendar language example (changes: admin/assets/js/view/demo.calendar.js)
+	* Update: Layer Slider to 5.6.0 (changes: assets/plugins/slider.layerslider)
+	* Fix: newsletter php code (changes: assets/php/newsletter.php - thanks to Cristea Mihai)
+	* Fix: transparent header color on mobile (changes: assets/css/layout.css)
+	* Fix: education template - mobile menu color (changes: assets/css/thematic-edication.css)
+	* Fix: Various small fixes (changes: assets/css/layout.css , assets/css/layout-shop.css, assets/css/thematics-music.css, assets/css/layout-RTL.css)
+
+
+@Version 	1.0.0
+@Date		Tuesday, August 25, 2015
+@Author		Dorin Grigoras
+	* Initial Release
