@@ -12,4 +12,14 @@ use yii\web\AssetBundle;
 class SmartyAsset extends AssetBundle
 {
     public $sourcePath = '@skeeks/template/smarty/src/HTML/assets/';
+
+    /**
+     * @param string $asset
+     * @return string
+     * @throws \yii\base\InvalidConfigException
+     */
+    static public function getAssetUrl($asset)
+    {
+        return \Yii::$app->assetManager->getAssetUrl(\Yii::$app->assetManager->getBundle(static::className()), $asset);
+    }
 }

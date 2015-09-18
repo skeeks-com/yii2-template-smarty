@@ -7,9 +7,11 @@
  */
 namespace skeeks\template\smarty;
 
-use yii\web\AssetBundle;
-
-class SmartyAdminAsset extends AssetBundle
+/**
+ * Class SmartyAdminAsset
+ * @package skeeks\template\smarty
+ */
+class SmartyAdminAsset extends SmartyAsset
 {
     public $sourcePath = '@skeeks/template/smarty/src/Admin/HTML/assets/';
 }
