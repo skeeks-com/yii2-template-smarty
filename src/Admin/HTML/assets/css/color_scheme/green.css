@@ -27,7 +27,6 @@
 	body.min #aside ul.nav>li>ul li,
 	body.min #aside ul.nav li.menu-open,
 	body.min #aside ul.nav>li:hover>ul,
-	body.min #aside ul.nav>li:hover>a span,
 	#aside nav ul li a.dashboard,
 	#aside .logo,
 	body.min #asidesize,
@@ -62,4 +61,10 @@
 	.panel-primary,
 	.panel-primary>.panel-heading {
 		border-color: #4b5354 !important;
+	}
+	
+	@media only screen and (min-width: 768px) {
+		body.min #aside ul.nav>li:hover>a span {
+			background-color: #5a6667;
+		}
 	}

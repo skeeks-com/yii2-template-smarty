@@ -46,6 +46,7 @@
 *************************************************** **/
 
 
+
 /** Globals
  **************************************************************** **/
 html, body {
@@ -839,10 +840,7 @@ section.page-header {
 	margin-top: 0;
 	margin-bottom: 0 !important;
 	background-color: rgba(0,0,0,0.05);
-	
-	/*
 	border-bottom: rgba(0,0,0,0.05) 1px solid;
-	*/
 
 	-webkit-transition: all 0s;
 	   -moz-transition: all 0s;
@@ -1019,7 +1017,11 @@ section.page-header h1 {
 	margin:0;
 	padding:0;
 	font-size:26px;
-	font-weight:500;
+	font-weight:300;
+}
+section.page-header span.font-lato {
+	border-top:rgba(0,0,0,0.05) 2px solid;
+	padding-top:2px;
 }
 
 section.page-header .breadcrumb {
@@ -1030,6 +1032,9 @@ section.page-header .breadcrumb {
 	background:transparent;
 	margin-bottom:0;
 	z-index:10;
+}
+section.page-header .breadcrumb>li+li:before {
+	content:"•";
 }
 section.page-header .breadcrumb a {
 	color:#333;
@@ -1552,6 +1557,12 @@ section.dark.page-header ul.page-options a {
 	#header li.quick-cart .quick-cart-footer>span {
 		display:inline-block;
 		padding-top:3px;
+		background-color:rgba(0,0,0,0.05);
+		padding: 4px 3px;
+
+		-webkit-border-radius: 3px;
+		   -moz-border-radius: 3px;
+				border-radius: 3px;
 	}
 
 	@media only screen and (min-width: 992px) { /* min-width */
@@ -2908,7 +2919,7 @@ section.dark.page-header ul.page-options a {
 		margin-top:0;
 		box-shadow:none;
 		border:#eee 1px solid;
-		border-top:#eee 2px solid;
+		border-top:#eee 0 solid;
 		list-style:none;
 		background-color:#fff;
 		box-shadow:rgba(0,0,0,0.2) 0 6px 12px;
@@ -2925,8 +2936,16 @@ section.dark.page-header ul.page-options a {
 		   -moz-border-radius: 0;
 				border-radius: 0;
 	}
+
 	#topNav ul.dropdown-menu li {
 		position:relative;
+		border-bottom: rgba(0,0,0,0.06) 1px solid;
+	}
+		#topNav .submenu-dark ul.dropdown-menu li {
+			border-bottom-color: rgba(0,0,0,0.2);
+		}
+	#topNav ul.dropdown-menu li:last-child {
+		border-bottom:0;
 	}
 	#topNav ul.dropdown-menu li a {
 		margin:0;
@@ -2975,7 +2994,7 @@ section.dark.page-header ul.page-options a {
 	#topNav ul.dropdown-menu>li:hover > ul.dropdown-menu {
 		display:block;
 		position:absolute;
-		left:100%; top:-2px;
+		left:100%; top:0;
 		padding:0; margin:0; 
 		border-left:0 !important;
 		border-right:0 !important;
@@ -3153,7 +3172,7 @@ section.dark.page-header ul.page-options a {
 		float: none;
 
 		margin:0; 
-		padding:15px 0;
+		padding:15px 0 0 0;
 	}
 	#topNav #topMain>li.mega-menu div.row>div:first-child {
 		border-left:0 !important;
@@ -4082,6 +4101,11 @@ section.dark .event-item {
 	}
 }
 
+
+/* flot chart */
+.flot-chart .legendLabel {
+	padding:0 8px;
+}
 
 
 
@@ -5356,11 +5380,8 @@ section#slider .btn-default {
 	}
 	
 	/* revslider 5+ */
-	.rev_slider_wrapper .tparrows {
+	.rev_slider_wrapper.arrows-bottom .tparrows {
 		top:100% !important;
-	}
-	.rev_slider_wrapper.arrows-middle .tparrows {
-		top:50% !important;
 	}
 	.rev_slider_wrapper .tp-caption {
 		text-shadow:none;

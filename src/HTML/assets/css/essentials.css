@@ -4051,7 +4051,7 @@ a.btn.btn-xs {
     line-height: 1;
     text-align: center;
     width: 25%;
-    border-left: 1px dotted rgba(0,0,0,0.3);
+    border-left: 1px solid rgba(0,0,0,0.1);
     color: #888;
     text-transform: capitalize;
 }

@@ -126,10 +126,14 @@
 						jQuery("#mobileMenuBtn").removeClass('active');
 						jQuery('body').removeClass('menu-open');
 					}
+					
+					// Aside
+					_asideFix();
 
-				}, 500);
+				}, 300);
 
 			});
+
 
 		});
 
@@ -1685,6 +1689,20 @@
 
 
 	}
+
+
+	function _asideFix() {
+
+		if(window.width > 768) {
+
+			if(jQuery("body").hasClass('menu-open')) {
+				jQuery("#middle").css({"margin-left":""});
+			}
+
+		}
+
+	}
+
 
 
 

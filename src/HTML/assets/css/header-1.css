@@ -10,7 +10,7 @@
 #topMain.nav-pills>li:hover>a, 
 #topMain.nav-pills>li:focus>a {
 	color:#1F262D;
-	background-color:rgba(0,0,0,0.01);
+	background-color:rgba(0,0,0,0.03);
 }
 #topMain.nav-pills>li.active>a {
 	color:#687482;
@@ -18,6 +18,10 @@
 
 #topMain.nav-pills>li>a.dropdown-toggle {
 	padding-right:25px;
+
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+			border-radius: 0;
 }
 #topMain.nav-pills>li>a.dropdown-toggle:after {
 	display: block;

@@ -325,11 +325,39 @@ section.dark div.shop-item-buttons a.btn-default:hover {
 div.shop-item>.thumbnail>.shop-item-counter {
 	position:relative;
 	position:absolute;
-	bottom:-1px;
+	bottom:4px;
 	left:4px; right:4px;
 	z-index:20;
-}
+	background-color:rgba(33,33,33,0.5);
 
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius-topleft: 0;
+	border-top-left-radius: 0;
+}
+div.shop-item>.thumbnail>.shop-item-counter:before {
+	position:absolute;
+	left:0;
+	top:-20px;
+	padding:0 6px;
+	height:20px;
+	color:#fff;
+	font: normal normal normal 14px/1 FontAwesome;
+	content:"\f017 \20 limited offer";
+	text-align:center;
+	line-height:20px;
+	background-color:rgba(33,33,33,0.5);
+
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-right-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-top-left-radius: 3px;
+}
 div.shop-item>.thumbnail>.shop-item-counter>.countdown .countdown-section {
     display: inline-block;
     font-size: 11px;
@@ -341,23 +369,12 @@ div.shop-item>.thumbnail>.shop-item-counter>.countdown .countdown-section {
 	text-align:center !important;
 	margin:0; padding:0;
     text-transform: capitalize;
-	background-color:rgba(33,33,33,1);
 	overflow:hidden;
 
 	-webkit-transition: all .500s;
 	   -moz-transition: all .500s;
 		 -o-transition: all .500s;
 			transition: all .500s; 
-
-	opacity:0.4;
-	filter: alpha(opacity=40);
-
-	-webkit-border-top-left-radius: 3px;
-	-webkit-border-top-right-radius: 3px;
-	-moz-border-radius-topleft: 3px;
-	-moz-border-radius-topright: 3px;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
 }
 div.shop-item>.thumbnail>.shop-item-counter>.countdown .countdown-amount {
 	color:#fff;
@@ -378,10 +395,7 @@ div.shop-item>.thumbnail>.shop-item-counter>.countdown .countdown-period {
 		 -o-transition: all .500s;
 			transition: all .500s; 
 }
-div.shop-item:hover>.thumbnail>.shop-item-counter>.countdown .countdown-section {
-	opacity:1;
-	filter: alpha(opacity=100);
-}
+
 div.shop-item:hover>.thumbnail>.shop-item-counter>.countdown .countdown-period {
 	margin-bottom:0 !important;
 }

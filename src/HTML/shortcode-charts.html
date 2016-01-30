@@ -242,6 +242,7 @@
 													<li><a href="index-corporate-4.html">CORPORATE LAYOUT 4</a></li>
 													<li><a href="index-corporate-5.html">CORPORATE LAYOUT 5</a></li>
 													<li><a href="index-corporate-6.html">CORPORATE LAYOUT 6</a></li>
+													<li><a href="index-corporate-7.html">CORPORATE LAYOUT 7</a></li>
 												</ul>
 											</li>
 											<li class="dropdown">
@@ -331,7 +332,6 @@
 												</a>
 												<ul class="dropdown-menu">
 													<li><a href="index-thematics-restaurant.html">HOME - RESTAURANT</a></li>
-													<li><a href="index-thematics-music.html">HOME - MUSIC/BAND</a></li>
 													<li><a href="index-thematics-education.html">HOME - EDUCATION</a></li>
 													<li><a href="index-thematics-construction.html">HOME - CONSTRUCTION</a></li>
 													<li><a href="index-thematics-medical.html">HOME - MEDICAL</a></li>
@@ -339,8 +339,7 @@
 													<li><a href="index-thematics-fashion.html">HOME - FASHION</a></li>
 													<li><a href="index-thematics-wedding.html">HOME - WEDDING</a></li>
 													<li><a href="index-thematics-events.html">HOME - EVENTS</a></li>
-													<li><a href="index-thematics-lawyer.html">HOME - LAWYER</a></li>
-													<li><a href="http://www.stepofweb.com/propose-design.html" data-toggle="tooltip" data-placement="top" title="Do you need a specific home design? We can include it in the next update!" target="_blank"><span class="label label-danger pull-right">hot</span> PROPOSE THEMATIC</a></li>
+												<li><a href="http://www.stepofweb.com/propose-design.html" data-toggle="tooltip" data-placement="top" title="Do you need a specific home design? We can include it in the next update!" target="_blank"><span class="label label-danger pull-right">hot</span> PROPOSE THEMATIC</a></li>
 												</ul>
 											</li>
 											<li class="divider"></li>
@@ -535,7 +534,6 @@
 												</ul>
 											</li>
 											<li><a href="page-careers.html">CAREERS</a></li>
-											<li><a href="page-music.html">MUSIC PAGE</a></li>
 											<li><a href="page-sitemap.html">SITEMAP</a></li>
 											<li><a href="page-blank.html">BLANK PAGE</a></li>
 										</ul>
@@ -1075,7 +1073,7 @@
 															<li><a href="shortcode-animations.html">ANIMATIONS</a></li>
 															<li><a href="shortcode-buttons.html">BUTTONS</a></li>
 															<li><a href="shortcode-carousel.html">CAROUSEL</a></li>
-															<li class="active"><a href="shortcode-charts.html">CHARTS</a></li>
+															<li class="active"><a href="shortcode-charts.html">GRAPHS</a></li>
 															<li><a href="shortcode-clients.html">CLIENTS</a></li>
 															<li><a href="shortcode-columns.html">GRID &amp; COLUMNS</a></li>
 															<li><a href="shortcode-counters.html">COUNTERS</a></li>
@@ -1169,15 +1167,20 @@
 			<section class="page-header page-header-xs">
 				<div class="container">
 
-					<h1>CHARTS</h1>
-					<span class="font-lato size-18 weight-300 hidden-xs">We believe in Simple &amp; Creative</span>
+					<h1>GRAPHS</h1>
 
 					<!-- breadcrumbs -->
 					<ol class="breadcrumb">
 						<li><a href="#">Home</a></li>
 						<li><a href="#">Shortcodes</a></li>
-						<li class="active">Charts</li>
+						<li class="active">Flot Charts</li>
 					</ol><!-- /breadcrumbs -->
+
+					<!-- page tabs -->
+					<ul class="page-header-tabs list-inline">
+						<li class="active"><a href="shortcode-charts.html">Flot Charts</a></li>
+						<li><a href="shortcode-charts-2.html">Charts JS</a></li>
+					</ul><!-- /page tabs -->
 
 				</div>
 			</section>
@@ -1187,12 +1190,57 @@
 			<!-- -->
 			<section>
 				<div class="container">
+					<div id="flot-sales" class="flot-chart height-300"><!-- FLOT CONTAINER --></div>
+
+<!-- pre code -->
+<div class="text-left margin-top-20">
+	<a href="javascript:;" onclick="jQuery('#pre-00').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-00" class="text-left noradius text-danger softhide">
+<span class="text-success">&lt;!-- HTML --&gt;</span>
+&lt;div id="flot-sales" class="flot-chart height-300"><span class="text-success">&lt;!-- FLOT CONTAINER --></span>&lt;/div>
+
+<span class="text-success">&lt;!-- JAVASCRIPT --&gt;</span>
+For javascript code example, see assets/js/view/demo.graphs.flot.js
+
+<span class="text-success">&lt;!-- JS LOAD --&gt;</span>
+loadScript(plugin_path + "chart.flot/jquery.flot.min.js", function(){
+	loadScript(plugin_path + "chart.flot/jquery.flot.resize.min.js", function(){
+		loadScript(plugin_path + "chart.flot/jquery.flot.time.min.js", function(){
+			loadScript(plugin_path + "chart.flot/jquery.flot.fillbetween.min.js", function(){
+				loadScript(plugin_path + "chart.flot/jquery.flot.orderBars.min.js", function(){
+					loadScript(plugin_path + "chart.flot/jquery.flot.pie.min.js", function(){
+						loadScript(plugin_path + "chart.flot/jquery.flot.tooltip.min.js", function(){
+						
+							<span class="text-success">// demo js script - or add js code directly here!</span>
+							loadScript("assets/js/view/demo.graphs.flot.js");
+
+						});
+					});
+				});
+			});
+		});
+	});
+});
+
+</pre>
+<!-- /pre code -->
+
+				</div>
+			</section>
+			<!-- / -->
+
+
+
+			<!-- -->
+			<section>
+				<div class="container">
 
 					<div class="row">
 						
 						<div class="col-md-6">
-							<h3 class="center">Line Chart</h3>
-							<canvas class="chartjs" id="lineChartCanvas" width="547" height="300"></canvas>
+							<h3 class="center">Bar Chart</h3>
+							<div id="flot-bar-horizontal" class="flot-chart height-300"><!-- FLOT CONTAINER --></div>
 
 <!-- pre code -->
 <div class="text-left margin-top-20">
@@ -1200,47 +1248,39 @@
 </div>
 <pre id="pre-0" class="text-left noradius text-danger softhide">
 <span class="text-success">&lt;!-- HTML --&gt;</span>
-&lt;canvas class="chartjs" id="lineChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+&lt;div id="flot-bar-horizontal" class="flot-chart height-300"><span class="text-success">&lt;!-- FLOT CONTAINER --></span>&lt;/div>
 
+<span class="text-success">&lt;!-- JAVASCRIPT --&gt;</span>
+For javascript code example, see assets/js/view/demo.graphs.flot.js
 
-<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
-jQuery(window).load( function() {
-	var lineChartCanvas = {
-		labels:["January","February","March","April","May","June","July"],
-		datasets:[
-			{
-				label: "My First dataset",
-				fillColor : "rgba(220,220,220,0.2)",
-				strokeColor : "rgba(220,220,220,1)",
-				pointColor : "rgba(220,220,220,1)",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(220,220,220,1)",
-				data : [65,59,90,81,56,55,40]
-			},
-			{
-				label: "My Second dataset",
-				fillColor : "rgba(151,187,205,0.2)",
-				strokeColor : "rgba(151,187,205,1)",
-				pointColor : "rgba(151,187,205,1)",
-				pointStrokeColor : "#fff",
-				pointHighlightFill : "#fff",
-				pointHighlightStroke : "rgba(151,187,205,1)",
-				data : [28,48,40,19,96,27,100]
-			}
-		]
-	};
+<span class="text-success">&lt;!-- JS LOAD --&gt;</span>
+loadScript(plugin_path + "chart.flot/jquery.flot.min.js", function(){
+	loadScript(plugin_path + "chart.flot/jquery.flot.resize.min.js", function(){
+		loadScript(plugin_path + "chart.flot/jquery.flot.time.min.js", function(){
+			loadScript(plugin_path + "chart.flot/jquery.flot.fillbetween.min.js", function(){
+				loadScript(plugin_path + "chart.flot/jquery.flot.orderBars.min.js", function(){
+					loadScript(plugin_path + "chart.flot/jquery.flot.pie.min.js", function(){
+						loadScript(plugin_path + "chart.flot/jquery.flot.tooltip.min.js", function(){
+						
+							<span class="text-success">// demo js script - or add js code directly here!</span>
+							loadScript("assets/js/view/demo.graphs.flot.js");
 
-	var ctx = document.getElementById("lineChartCanvas").getContext("2d");
-	new Chart(ctx).Line(lineChartCanvas);
+						});
+					});
+				});
+			});
+		});
+	});
 });
+</pre>
+<!-- /pre code -->
 </pre>
 <!-- /pre code -->
 						</div>
 
 						<div class="col-md-6">
-							<h3 class="center">Bar Chart</h3>
-							<canvas class="chartjs" id="barChartCanvas" width="547" height="300"></canvas>
+							<h3 class="center">Stats Chart</h3>
+							<div id="flot-stats" class="flot-chart height-300"><!-- FLOT CONTAINER --></div>
 
 <!-- pre code -->
 <div class="text-left margin-top-20">
@@ -1248,26 +1288,29 @@ jQuery(window).load( function() {
 </div>
 <pre id="pre-1" class="text-left noradius text-danger softhide">
 <span class="text-success">&lt;!-- HTML --&gt;</span>
-&lt;canvas class="chartjs" id="barChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+&lt;div id="flot-stats" class="flot-chart height-300"><span class="text-success">&lt;!-- FLOT CONTAINER --></span>&lt;/div>
 
+<span class="text-success">&lt;!-- JAVASCRIPT --&gt;</span>
+For javascript code example, see assets/js/view/demo.graphs.flot.js
 
-<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
-jQuery(window).load( function() {
-	var barChartCanvas = {
-		labels:["January","February","March","April","May","June","July"],
-		datasets:[
-			{
-				fillColor : "rgba(220,220,220,0.5)",
-				strokeColor : "rgba(220,220,220,0.8)",
-				highlightFill: "rgba(220,220,220,0.75)",
-				highlightStroke: "rgba(220,220,220,1)",
-				data : [65,59,90,81,56,55,50]
-			}
-		]
-	};
+<span class="text-success">&lt;!-- JS LOAD --&gt;</span>
+loadScript(plugin_path + "chart.flot/jquery.flot.min.js", function(){
+	loadScript(plugin_path + "chart.flot/jquery.flot.resize.min.js", function(){
+		loadScript(plugin_path + "chart.flot/jquery.flot.time.min.js", function(){
+			loadScript(plugin_path + "chart.flot/jquery.flot.fillbetween.min.js", function(){
+				loadScript(plugin_path + "chart.flot/jquery.flot.orderBars.min.js", function(){
+					loadScript(plugin_path + "chart.flot/jquery.flot.pie.min.js", function(){
+						loadScript(plugin_path + "chart.flot/jquery.flot.tooltip.min.js", function(){
+						
+							<span class="text-success">// demo js script - or add js code directly here!</span>
+							loadScript("assets/js/view/demo.graphs.flot.js");
 
-	var ctx = document.getElementById("barChartCanvas").getContext("2d");
-	new Chart(ctx).Bar(barChartCanvas);
+						});
+					});
+				});
+			});
+		});
+	});
 });
 </pre>
 <!-- /pre code -->
@@ -1288,8 +1331,8 @@ jQuery(window).load( function() {
 					<div class="row">
 
 						<div class="col-md-6">
-							<h3 class="center">Polar Area Chart</h3>
-							<canvas class="chartjs" id="polarAreaChartCanvas" width="547" height="300"></canvas>
+							<h3 class="center">Bar Chart</h3>
+							<div id="flot-bar" class="flot-chart height-300"><!-- FLOT CONTAINER --></div>
 
 <!-- pre code -->
 <div class="text-left margin-top-20">
@@ -1297,40 +1340,29 @@ jQuery(window).load( function() {
 </div>
 <pre id="pre-2" class="text-left noradius text-danger softhide">
 <span class="text-success">&lt;!-- HTML --&gt;</span>
-&lt;canvas class="chartjs" id="polarAreaChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+&lt;div id="flot-bar" class="flot-chart height-300"><span class="text-success">&lt;!-- FLOT CONTAINER --></span>&lt;/div>
 
+<span class="text-success">&lt;!-- JAVASCRIPT --&gt;</span>
+For javascript code example, see assets/js/view/demo.graphs.flot.js
 
-<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
-jQuery(window).load( function() {
-	var polarAreaChartCanvas = [
-		{
-			value : 62,
-			color: "#D97041"
-		},
-		{
-			value : 70,
-			color: "#C7604C"
-		},
-		{
-			value : 41,
-			color: "#21323D"
-		},
-		{
-			value : 24,
-			color: "#9D9B7F"
-		},
-		{
-			value : 55,
-			color: "#7D4F6D"
-		},
-		{
-			value : 18,
-			color: "#584A5E"
-		}
-	];
+<span class="text-success">&lt;!-- JS LOAD --&gt;</span>
+loadScript(plugin_path + "chart.flot/jquery.flot.min.js", function(){
+	loadScript(plugin_path + "chart.flot/jquery.flot.resize.min.js", function(){
+		loadScript(plugin_path + "chart.flot/jquery.flot.time.min.js", function(){
+			loadScript(plugin_path + "chart.flot/jquery.flot.fillbetween.min.js", function(){
+				loadScript(plugin_path + "chart.flot/jquery.flot.orderBars.min.js", function(){
+					loadScript(plugin_path + "chart.flot/jquery.flot.pie.min.js", function(){
+						loadScript(plugin_path + "chart.flot/jquery.flot.tooltip.min.js", function(){
+						
+							<span class="text-success">// demo js script - or add js code directly here!</span>
+							loadScript("assets/js/view/demo.graphs.flot.js");
 
-	var ctx = document.getElementById("polarAreaChartCanvas").getContext("2d");
-	new Chart(ctx).PolarArea(polarAreaChartCanvas);
+						});
+					});
+				});
+			});
+		});
+	});
 });
 </pre>
 <!-- /pre code -->
@@ -1338,7 +1370,7 @@ jQuery(window).load( function() {
 
 						<div class="col-md-6">
 							<h3 class="center">Pie Chart</h3>
-							<canvas class="chartjs" id="pieChartCanvas" width="547" height="300"></canvas>
+							<div id="flot-pie" class="flot-chart height-300"><!-- FLOT CONTAINER --></div>
 
 <!-- pre code -->
 <div class="text-left margin-top-20">
@@ -1346,32 +1378,29 @@ jQuery(window).load( function() {
 </div>
 <pre id="pre-3" class="text-left noradius text-danger softhide">
 <span class="text-success">&lt;!-- HTML --&gt;</span>
-&lt;canvas class="chartjs" id="pieChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+&lt;div id="flot-pie" class="flot-chart height-300"><span class="text-success">&lt;!-- FLOT CONTAINER --></span>&lt;/div>
 
+<span class="text-success">&lt;!-- JAVASCRIPT --&gt;</span>
+For javascript code example, see assets/js/view/demo.graphs.flot.js
 
-<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
-jQuery(window).load( function() {
-	var pieChartCanvas = [
-		{
-			value: 30,
-			color:"#F38630"
-		},
-		{
-			value : 50,
-			color : "#E0E4CC"
-		},
-		{
-			value : 100,
-			color : "#69D2E7"
-		},
-		{
-			value : 45,
-			color : "#1E73BE"
-		}
-	];
+<span class="text-success">&lt;!-- JS LOAD --&gt;</span>
+loadScript(plugin_path + "chart.flot/jquery.flot.min.js", function(){
+	loadScript(plugin_path + "chart.flot/jquery.flot.resize.min.js", function(){
+		loadScript(plugin_path + "chart.flot/jquery.flot.time.min.js", function(){
+			loadScript(plugin_path + "chart.flot/jquery.flot.fillbetween.min.js", function(){
+				loadScript(plugin_path + "chart.flot/jquery.flot.orderBars.min.js", function(){
+					loadScript(plugin_path + "chart.flot/jquery.flot.pie.min.js", function(){
+						loadScript(plugin_path + "chart.flot/jquery.flot.tooltip.min.js", function(){
+						
+							<span class="text-success">// demo js script - or add js code directly here!</span>
+							loadScript("assets/js/view/demo.graphs.flot.js");
 
-	var ctx = document.getElementById("pieChartCanvas").getContext("2d");
-	new Chart(ctx).Pie(pieChartCanvas);
+						});
+					});
+				});
+			});
+		});
+	});
 });
 </pre>
 <!-- /pre code -->
@@ -1391,9 +1420,9 @@ jQuery(window).load( function() {
 
 					<div class="row">
 
-						<div class="col-md-6">
-							<h3 class="center">Doughnut Chart</h3>
-							<canvas class="chartjs" id="doughnutChartCanvas" width="547" height="300"></canvas>
+						<div class="col-md-12">
+							<h3 class="center">Realtime Chart</h3>
+							<div id="flot-realtime" class="flot-chart height-300"><!-- FLOT CONTAINER --></div>
 
 <!-- pre code -->
 <div class="text-left margin-top-20">
@@ -1401,89 +1430,34 @@ jQuery(window).load( function() {
 </div>
 <pre id="pre-4" class="text-left noradius text-danger softhide">
 <span class="text-success">&lt;!-- HTML --&gt;</span>
-&lt;canvas class="chartjs" id="doughnutChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
+&lt;div id="flot-realtime" class="flot-chart height-300"><span class="text-success">&lt;!-- FLOT CONTAINER --></span>&lt;/div>
 
+<span class="text-success">&lt;!-- JAVASCRIPT --&gt;</span>
+For javascript code example, see assets/js/view/demo.graphs.flot.js
 
-<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
-jQuery(window).load( function() {
-	var doughnutChartCanvas = [
-		{
-			value: 30,
-			color:"#F7464A"
-		},
-		{
-			value : 50,
-			color : "#46BFBD"
-		},
-		{
-			value : 100,
-			color : "#FDB45C"
-		},
-		{
-			value : 40,
-			color : "#949FB1"
-		},
-		{
-			value : 120,
-			color : "#4D5360"
-		}
-	];
+<span class="text-success">&lt;!-- JS LOAD --&gt;</span>
+loadScript(plugin_path + "chart.flot/jquery.flot.min.js", function(){
+	loadScript(plugin_path + "chart.flot/jquery.flot.resize.min.js", function(){
+		loadScript(plugin_path + "chart.flot/jquery.flot.time.min.js", function(){
+			loadScript(plugin_path + "chart.flot/jquery.flot.fillbetween.min.js", function(){
+				loadScript(plugin_path + "chart.flot/jquery.flot.orderBars.min.js", function(){
+					loadScript(plugin_path + "chart.flot/jquery.flot.pie.min.js", function(){
+						loadScript(plugin_path + "chart.flot/jquery.flot.tooltip.min.js", function(){
+						
+							<span class="text-success">// demo js script - or add js code directly here!</span>
+							loadScript("assets/js/view/demo.graphs.flot.js");
 
-	var ctx = document.getElementById("doughnutChartCanvas").getContext("2d");
-	new Chart(ctx).Doughnut(doughnutChartCanvas);
+						});
+					});
+				});
+			});
+		});
+	});
 });
 </pre>
 <!-- /pre code -->
 						</div>
 
-						<div class="col-md-6">
-							<h3 class="center">Radar Chart</h3>
-							<canvas class="chartjs" id="radarChartCanvas" width="547" height="300"></canvas>
-
-<!-- pre code -->
-<div class="text-left margin-top-20">
-	<a href="javascript:;" onclick="jQuery('#pre-5').slideToggle();">Show Code</a>
-</div>
-<pre id="pre-5" class="text-left noradius text-danger softhide">
-<span class="text-success">&lt;!-- HTML --&gt;</span>
-&lt;canvas class="chartjs" id="radarChartCanvas" width="547" height="300"&gt;&lt;/canvas&gt;
-
-
-<span class="text-success">&lt;!-- PAGE LEVEL SCRIPTS --&gt;</script>
-jQuery(window).load( function() {
-	var radarChartCanvas = {
-		labels:["A","B","C","D","E","F","G"],
-		datasets:[
-			{
-				label: "My First dataset",
-				fillColor: "rgba(220,220,220,0.2)",
-				strokeColor: "rgba(220,220,220,1)",
-				pointColor: "rgba(220,220,220,1)",
-				pointStrokeColor: "#fff",
-				pointHighlightFill: "#fff",
-				pointHighlightStroke: "rgba(220,220,220,1)",
-				data: [65,59,90,81,56,55,40]
-			},
-			{
-				label: "My Second dataset",
-				fillColor: "rgba(151,187,205,0.2)",
-				strokeColor: "rgba(151,187,205,1)",
-				pointColor: "rgba(151,187,205,1)",
-				pointStrokeColor: "#fff",
-				pointHighlightFill: "#fff",
-				pointHighlightStroke: "rgba(151,187,205,1)",
-				data: [28,48,40,19,96,27,100]
-			}
-		]
-	};
-
-	var ctx = document.getElementById("radarChartCanvas").getContext("2d");
-	new Chart(ctx).Radar(radarChartCanvas);
-});
-</pre>
-<!-- /pre code -->
-
-						</div>
 
 					</div>
 
@@ -1659,171 +1633,23 @@ jQuery(window).load( function() {
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<script type="text/javascript">
-			/**
-				Chart.js
-				http://www.chartjs.org/
-			**/
-			loadScript(plugin_path + 'chart.chartjs/Chart.min.js', function() {
+			loadScript(plugin_path + "chart.flot/jquery.flot.min.js", function(){
+				loadScript(plugin_path + "chart.flot/jquery.flot.resize.min.js", function(){
+					loadScript(plugin_path + "chart.flot/jquery.flot.time.min.js", function(){
+						loadScript(plugin_path + "chart.flot/jquery.flot.fillbetween.min.js", function(){
+							loadScript(plugin_path + "chart.flot/jquery.flot.orderBars.min.js", function(){
+								loadScript(plugin_path + "chart.flot/jquery.flot.pie.min.js", function(){
+									loadScript(plugin_path + "chart.flot/jquery.flot.tooltip.min.js", function(){
+									
+										// demo js script - or add js code directly here!
+										loadScript("assets/js/view/demo.graphs.flot.js");
 
-				var lineChartCanvas = {
-					labels : ["January","February","March","April","May","June","July"],
-					datasets : [
-						{
-							label: "My First dataset",
-							fillColor : "rgba(220,220,220,0.2)",
-							strokeColor : "rgba(220,220,220,1)",
-							pointColor : "rgba(220,220,220,1)",
-							pointStrokeColor : "#fff",
-							pointHighlightFill : "#fff",
-							pointHighlightStroke : "rgba(220,220,220,1)",
-							data : [65,59,90,81,56,55,40]
-						},
-						{
-							label: "My Second dataset",
-							fillColor : "rgba(151,187,205,0.2)",
-							strokeColor : "rgba(151,187,205,1)",
-							pointColor : "rgba(151,187,205,1)",
-							pointStrokeColor : "#fff",
-							pointHighlightFill : "#fff",
-							pointHighlightStroke : "rgba(151,187,205,1)",
-							data : [28,48,40,19,96,27,100]
-						}
-					]
-				};
-
-				var barChartCanvas = {
-					labels : ["January","February","March","April","May","June","July"],
-					datasets : [
-						{
-							fillColor : "rgba(220,220,220,0.5)",
-							strokeColor : "rgba(220,220,220,0.8)",
-							highlightFill: "rgba(220,220,220,0.75)",
-							highlightStroke: "rgba(220,220,220,1)",
-							data : [65,59,90,81,56,55,50]
-						}
-					]
-				};
-
-				var radarChartCanvas = {
-					labels : ["A","B","C","D","E","F","G"],
-					datasets: [
-						{
-							label: "My First dataset",
-							fillColor: "rgba(220,220,220,0.2)",
-							strokeColor: "rgba(220,220,220,1)",
-							pointColor: "rgba(220,220,220,1)",
-							pointStrokeColor: "#fff",
-							pointHighlightFill: "#fff",
-							pointHighlightStroke: "rgba(220,220,220,1)",
-							data: [65,59,90,81,56,55,40]
-						},
-						{
-							label: "My Second dataset",
-							fillColor: "rgba(151,187,205,0.2)",
-							strokeColor: "rgba(151,187,205,1)",
-							pointColor: "rgba(151,187,205,1)",
-							pointStrokeColor: "#fff",
-							pointHighlightFill: "#fff",
-							pointHighlightStroke: "rgba(151,187,205,1)",
-							data: [28,48,40,19,96,27,100]
-						}
-					]
-				};
-
-				var pieChartCanvas = [
-					{
-						value: 30,
-						color:"#F38630"
-					},
-					{
-						value : 50,
-						color : "#E0E4CC"
-					},
-					{
-						value : 100,
-						color : "#69D2E7"
-					},
-					{
-						value : 45,
-						color : "#1E73BE"
-					}
-				];
-
-				var polarAreaChartCanvas = [
-					{
-						value : 62,
-						color: "#D97041"
-					},
-					{
-						value : 70,
-						color: "#C7604C"
-					},
-					{
-						value : 41,
-						color: "#21323D"
-					},
-					{
-						value : 24,
-						color: "#9D9B7F"
-					},
-					{
-						value : 55,
-						color: "#7D4F6D"
-					},
-					{
-						value : 18,
-						color: "#584A5E"
-					}
-				];
-
-				var doughnutChartCanvas = [
-					{
-						value: 30,
-						color:"#F7464A"
-					},
-					{
-						value : 50,
-						color : "#46BFBD"
-					},
-					{
-						value : 100,
-						color : "#FDB45C"
-					},
-					{
-						value : 40,
-						color : "#949FB1"
-					},
-					{
-						value : 120,
-						color : "#4D5360"
-					}
-				];
-
-
-				// lineChartCanvas
-				var ctx = document.getElementById("lineChartCanvas").getContext("2d");
-				new Chart(ctx).Line(lineChartCanvas);
-
-				// barChartCanvas
-				var ctx = document.getElementById("barChartCanvas").getContext("2d");
-				new Chart(ctx).Bar(barChartCanvas);
-
-				// radarChartCanvas
-				var ctx = document.getElementById("radarChartCanvas").getContext("2d");
-				new Chart(ctx).Radar(radarChartCanvas);
-
-				// polarAreaChartCanvas
-				var ctx = document.getElementById("polarAreaChartCanvas").getContext("2d");
-				new Chart(ctx).PolarArea(polarAreaChartCanvas);
-
-				// pieChartCanvas
-				var ctx = document.getElementById("pieChartCanvas").getContext("2d");
-				new Chart(ctx).Pie(pieChartCanvas);
-
-				// doughnutChartCanvas
-				var ctx = document.getElementById("doughnutChartCanvas").getContext("2d");
-				new Chart(ctx).Doughnut(doughnutChartCanvas);
-
+									});
+								});
+							});
+						});
+					});
+				});
 			});
 		</script>
 

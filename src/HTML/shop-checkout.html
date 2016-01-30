@@ -295,6 +295,7 @@
 													<li><a href="index-corporate-4.html">CORPORATE LAYOUT 4</a></li>
 													<li><a href="index-corporate-5.html">CORPORATE LAYOUT 5</a></li>
 													<li><a href="index-corporate-6.html">CORPORATE LAYOUT 6</a></li>
+													<li><a href="index-corporate-7.html">CORPORATE LAYOUT 7</a></li>
 												</ul>
 											</li>
 											<li class="dropdown">
@@ -384,7 +385,6 @@
 												</a>
 												<ul class="dropdown-menu">
 													<li><a href="index-thematics-restaurant.html">HOME - RESTAURANT</a></li>
-													<li><a href="index-thematics-music.html">HOME - MUSIC/BAND</a></li>
 													<li><a href="index-thematics-education.html">HOME - EDUCATION</a></li>
 													<li><a href="index-thematics-construction.html">HOME - CONSTRUCTION</a></li>
 													<li><a href="index-thematics-medical.html">HOME - MEDICAL</a></li>
@@ -392,8 +392,7 @@
 													<li><a href="index-thematics-fashion.html">HOME - FASHION</a></li>
 													<li><a href="index-thematics-wedding.html">HOME - WEDDING</a></li>
 													<li><a href="index-thematics-events.html">HOME - EVENTS</a></li>
-													<li><a href="index-thematics-lawyer.html">HOME - LAWYER</a></li>
-													<li><a href="http://www.stepofweb.com/propose-design.html" data-toggle="tooltip" data-placement="top" title="Do you need a specific home design? We can include it in the next update!" target="_blank"><span class="label label-danger pull-right">hot</span> PROPOSE THEMATIC</a></li>
+												<li><a href="http://www.stepofweb.com/propose-design.html" data-toggle="tooltip" data-placement="top" title="Do you need a specific home design? We can include it in the next update!" target="_blank"><span class="label label-danger pull-right">hot</span> PROPOSE THEMATIC</a></li>
 												</ul>
 											</li>
 											<li class="divider"></li>
@@ -588,7 +587,6 @@
 												</ul>
 											</li>
 											<li><a href="page-careers.html">CAREERS</a></li>
-											<li><a href="page-music.html">MUSIC PAGE</a></li>
 											<li><a href="page-sitemap.html">SITEMAP</a></li>
 											<li><a href="page-blank.html">BLANK PAGE</a></li>
 										</ul>
@@ -1128,7 +1126,7 @@
 															<li><a href="shortcode-animations.html">ANIMATIONS</a></li>
 															<li><a href="shortcode-buttons.html">BUTTONS</a></li>
 															<li><a href="shortcode-carousel.html">CAROUSEL</a></li>
-															<li><a href="shortcode-charts.html">CHARTS</a></li>
+															<li><a href="shortcode-charts.html">GRAPHS</a></li>
 															<li><a href="shortcode-clients.html">CLIENTS</a></li>
 															<li><a href="shortcode-columns.html">GRID &amp; COLUMNS</a></li>
 															<li><a href="shortcode-counters.html">COUNTERS</a></li>
@@ -1224,7 +1222,6 @@
 				<div class="container">
 
 					<h1>CHECKOUT</h1>
-					<span class="font-lato size-18 weight-300 hidden-xs">We believe in Simple &amp; Creative</span>
 
 					<!-- breadcrumbs -->
 					<ol class="breadcrumb">
@@ -1260,7 +1257,7 @@
 					<form class="row clearfix" method="post" action="shop-checkout-final.html">
 
 						<div class="col-lg-7 col-sm-7">
-							<div class="heading-title heading-dotted">
+							<div class="heading-title">
 								<h4>Billing &amp; Shipping</h4>
 							</div>
 
@@ -1344,34 +1341,6 @@
 								<hr />
 
 								<div class="row">
-									<div class="col-lg-12 nomargin clearfix">
-
-										<div class="clearfix">
-											<label class="checkbox pull-left">
-												<input id="accountswitch" name="create-account[yes]" type="checkbox" value="1" />
-												<i></i> <span class="weight-300">Create an account for later use</span>
-											</label>
-										</div>
-
-										<!-- CREATE ACCOUNT -->
-										<div id="newaccount" class="margin-top-10 margin-bottom-30 softhide">
-
-											<div class="row nomargin-bottom">
-												<div class="col-md-6 col-sm-6">
-													<label for="account:password">Password *</label>
-													<input id="account:password" name="account[password]" type="password" class="form-control" />
-												</div>
-												<div class="col-md-6 col-sm-6">
-													<label for="account:password2">Confirm Password *</label>
-													<input id="account:password2" name="account[password2]" type="password" class="form-control" />
-												</div>
-											</div>
-											<small class="text-warning">NOTE: Email address will be used to login</small>
-											
-										</div>
-										<!-- /CREATE ACCOUNT -->
-
-									</div>
 
 									<div class="col-lg-12 nomargin clearfix">
 										<label class="checkbox pull-left"><!-- see assets/js/view/demo.shop.js - CHECKOUT section -->
@@ -1473,7 +1442,7 @@
 
 
 						<div class="col-lg-5 col-sm-5">
-							<div class="heading-title heading-dotted">
+							<div class="heading-title">
 								<h4>Payment Method</h4>
 							</div>
 
@@ -1632,7 +1601,41 @@
 							</div>
 							<!-- /TOTAL / PLACE ORDER -->
 
+							<!-- CREATE ACCOUNT -->
+							<div class="toggle-transparent toggle-bordered-full margin-top-30 clearfix">
+								<div class="toggle active">
+									<div class="toggle-content">
+
+										<div class="clearfix">
+											<label class="checkbox pull-left">
+												<input id="accountswitch" name="create-account[yes]" type="checkbox" value="1" />
+												<i></i> <span class="weight-300">Create an account for later use</span>
+											</label>
+										</div>
+
+										<!-- CREATE ACCOUNT FORM -->
+										<div id="newaccount" class="margin-top-10 margin-bottom-30 softhide">
+
+											<div class="row nomargin-bottom">
+												<div class="col-md-6 col-sm-6">
+													<label for="account:password">Password *</label>
+													<input id="account:password" name="account[password]" type="password" class="form-control" />
+												</div>
+												<div class="col-md-6 col-sm-6">
+													<label for="account:password2">Confirm Password *</label>
+													<input id="account:password2" name="account[password2]" type="password" class="form-control" />
+												</div>
+											</div>
+											<small class="text-warning">NOTE: Email address will be used to login</small>
+											
+										</div>
+										<!-- /CREATE ACCOUNT FORM -->
+
+
+								</div>
+							</div>
 						</div>
+						<!-- /CREATE ACCOUNT -->
 
 					</form>
 					<!-- /CHECKOUT -->

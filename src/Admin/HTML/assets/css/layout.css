@@ -560,6 +560,7 @@ body.boxed #asidebg {
 
 
 /* MINIFIED ASIDE */
+@media only screen and (min-width: 768px) {
 	body.min #aside #asidebg {
 		top:94px;
 	}
@@ -661,7 +662,7 @@ body.boxed #asidebg {
 	body.min #aside nav ul li ul > li:before {
 		display:none;
 	}
-	
+}
 	#aside nav ul li.active li.active>a:after,
 	#aside nav ul li ul li a:hover:after {
 		content:' ';

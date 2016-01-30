@@ -1,3 +1,20 @@
+@Version 	1.1.2
+@Date		Sunday, September 20, 2015
+@Author		Dorin Grigoras
+	* New: Flot Charts (changes: added shortcode-charts.html, assets/plugins/chart.flot/)
+	* Fix: Various small fixes (changes: assets/css/layout.css)
+
+
+@Version 	1.1.1
+@Date		Friday, September 18, 2015
+@Author		Dorin Grigoras
+	* New: Corporate Page 7 (changes: added index-corporate-7.html)
+	* Update: Documentation - Revolution Slider 5 Local File
+	* Fix: Admin left menu after browser resize (changes: admin/assets/css/layout.css, admin/assets/css/color_scheme/green.css)
+	* Fix: Admin content resize (changes: admin/assets/js/app.js)
+	* Fix: Revolution Slider v5 arrows bottom position (changes: assets/css/layout.css removed .arrow-middle, added .arrow-bottom - used on: rs-15.html, rs-16.html)
+	
+
 @Version 	1.1.0
 @Date		Monday, September 14, 2015
 @Author		Dorin Grigoras
