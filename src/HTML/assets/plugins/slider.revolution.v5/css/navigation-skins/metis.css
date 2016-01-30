@@ -118,4 +118,89 @@ website:    http://www.themepunch.com
         bottom:-8px;
    }
 
-
+/* METIS TAB */
+.metis .tp-tab-number {
+        color: #fff;
+        font-size: 40px;
+        line-height: 30px;
+        font-weight: 400;
+        font-family: "Playfair Display";
+        width: 50px;
+        margin-right: 17px;
+        display: inline-block;
+        float: left;
+    }
+    .metis .tp-tab-mask {
+        padding-left: 20px;
+        left: 0px;
+        max-width: 90px !important;
+        transition: 0.4s padding-left, 0.4s left, 0.4s max-width;
+    }
+    .metis:hover .tp-tab-mask {
+        padding-left: 0px;
+        left: 50px;
+        max-width: 500px !important;
+    }
+    .metis .tp-tab-divider {
+        border-right: 1px solid transparent;
+        height: 30px;
+        width: 1px;
+        margin-top: 5px;
+        display: inline-block;
+        float: left;
+    }
+    .metis .tp-tab-title {
+        color: #fff;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 400;
+        font-family: "Playfair Display";
+        position: relative;
+        padding-top: 10px;
+        padding-left: 30px;
+        display: inline-block;
+        transform: translateX(-100%);
+        transition: 0.4s all;
+    }
+    .metis .tp-tab-title-mask {
+        position: absolute;
+        overflow: hidden;
+        left: 67px;
+    }
+    .metis:hover .tp-tab-title {
+        transform: translateX(0);
+    }
+    .metis .tp-tab {
+        opacity: 0.15;
+        transition: 0.4s all;
+    }
+    .metis .tp-tab:hover,
+    .metis .tp-tab.selected {
+        opacity: 1;
+    }
+    .metis .tp-tab.selected .tp-tab-divider {
+        border-right: 1px solid #cdb083;
+    }
+    .metis.tp-tabs {
+        max-width: 118px !important;
+        padding-left: 50px;
+    }
+    .metis.tp-tabs:before {
+        content: " ";
+        height: 100%;
+        width: 88px;
+        background: rgba(0, 0, 0, 0.15);
+        border-right: 1px solid rgba(255, 255, 255, 0.10);
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        transition: 0.4s all;
+    }
+    .metis.tp-tabs:hover:before {
+        width: 118px;
+    }
+    @media (max-width: 499px) {
+        .metis.tp-tabs:before {
+            background: rgba(0, 0, 0, 0.75);
+        }
+    }

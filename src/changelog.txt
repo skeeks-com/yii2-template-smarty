@@ -1,8 +1,37 @@
+@Version 	1.1.3
+@Date		Tuesday, January 12, 2016
+@Author		Dorin Grigoras
+	* New: RS Page - Concept Slider (added: rs-33.html)
+	* New: RS Page - Creative Freedom (added: rs-34.html)
+	* New: RS Page - Fullscreen Toggle (added: rs-35.html)
+	* New: RS Page - Parallax Scene (added: rs-36.html)
+	* New: RS Page - Wow Factor (added: rs-37.html)
+	* New: RS Page - 3D Web Product (added: rs-38.html)
+	* New: RS Page - Premium eCommerce (added: rs-39.html)
+	* New: Hosting theme (changes: added index-thematics-hosting.html)
+	* New: Hosting one page (changes: added index-onepage-hosting.html)
+	* New: Lawyer theme (changes: added index-thematics-lawyer.html)
+	* New: Lawyer one page (changes: added index-onepage-lawyer.html)
+	* New: Vectorial Maps (changes: assets/css/layout.css, added: assets/plugins/jquery-vectormap , shortcode-maps-vectorial.html)
+	* Update: Bootstrap to v3.3.6 (changes: replaced assets/plugins/bootstrap/ folder)
+	* Update: Revolution Slider to v5.1 (changes: replaced assets/plugins/slider.revolution.v5)
+	* Update: Revolution Slider 5 minor changes (changes: assets/css/layout.css)
+	* Update: Main menu default height on small screens changed to see all 7 items (changes:  assets/css/layout.css)
+	* Fix: Removed main menu line separator (changes: assets/css/layout.css)
+	* Fix: RTL vertical menu (changes: assets/css/layout-RTL.css)
+	* Fix: RTL Login Page (changes: assets/css/layout-RTL.css)
+	* Fix: Main menu link is now clickable if # is replaced with a valid link (changes: assets/js/scripts.js)
+	* Fix: Page Header Dark Layout (chnages: assets/css/layout-dark.css)
+	* Fix: Various Dark Elements (changes: assets/css/layout-dark.css)
+
+
+
 @Version 	1.1.2
 @Date		Sunday, September 20, 2015
 @Author		Dorin Grigoras
 	* New: Flot Charts (changes: added shortcode-charts.html, assets/plugins/chart.flot/)
 	* Fix: Various small fixes (changes: assets/css/layout.css)
+
 
 
 @Version 	1.1.1

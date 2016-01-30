@@ -1,10 +1,9 @@
 /********************************************
  * REVOLUTION 5.0 EXTENSION - CAROUSEL
- * @version: 1.0.1 (18.08.2015)
+ * @version: 1.0.2 (01.10.2015)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 *********************************************/
-
 (function($) {
 
 var _R = jQuery.fn.revolution;
@@ -161,8 +160,9 @@ jQuery.extend(true,_R, {
 			// ZINDEX ADJUSTEMENT
 			tr.zIndex = Math.round(100-Math.abs(d*5));
 			
-			// TRANSFORM STYLE
-			tr.transformStyle = "flat";
+			// TRANSFORM STYLE			
+			tr.transformStyle = opt.parallax.type!="3D" && opt.parallax.type!="3d" ? "flat" : "preserve-3d";
+			
 
 
 			// ADJUST TRANSFORMATION OF SLIDE
@@ -200,7 +200,11 @@ var defineCarouselElements = function(opt) {
 
 	// SET PERSPECTIVE IF ROTATION IS ADDED
 	if (_.maxRotation!==0) 
-		punchgs.TweenLite.set(_.wrap,{perspective:1200,transformStyle:"flat"});
+		if (opt.parallax.type!="3D" && opt.parallax.type!="3d") 
+			punchgs.TweenLite.set(_.wrap,{perspective:1200,transformStyle:"flat"});
+		else
+			punchgs.TweenLite.set(_.wrap,{perspective:1600,transformStyle:"preserve-3d"});
+
 	if (_.border_radius!==undefined && parseInt(_.border_radius,0) >0) {
 		punchgs.TweenLite.set(opt.c.find('.tp-revslider-slidesli'),{borderRadius:_.border_radius});
 	}		
@@ -238,12 +242,16 @@ var setCarouselDefaults = function(opt) {
 	_.wrapoffset = _.horizontal_align==="center" ? (opt.c.width()-roff - loff - _.wrapwidth)/2 : 0;	
 	_.wrapoffset = opt.sliderLayout!="auto" && opt.outernav ? 0 : _.wrapoffset < loff ? loff : _.wrapoffset;
 	
+	var ovf = "hidden";
+	if ((opt.parallax.type=="3D" || opt.parallax.type=="3d"))
+		ovf = "visible";
+
 	
 	
 	if (_.horizontal_align==="right")	
-		punchgs.TweenLite.set(_.wrap,{left:"auto",right:_.wrapoffset+"px", width:_.wrapwidth, overflow:"hidden"});
+		punchgs.TweenLite.set(_.wrap,{left:"auto",right:_.wrapoffset+"px", width:_.wrapwidth, overflow:ovf});
 	else
-		punchgs.TweenLite.set(_.wrap,{right:"auto",left:_.wrapoffset+"px", width:_.wrapwidth, overflow:"hidden"});
+		punchgs.TweenLite.set(_.wrap,{right:"auto",left:_.wrapoffset+"px", width:_.wrapwidth, overflow:ovf});
 
 
 

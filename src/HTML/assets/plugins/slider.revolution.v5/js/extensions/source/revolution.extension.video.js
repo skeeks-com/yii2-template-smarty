@@ -1,12 +1,10 @@
 /********************************************
  * REVOLUTION 5.0 EXTENSION - VIDEO FUNCTIONS
- * @version: 1.0.5 (11.09.2015)
+ * @version: 1.1.0 (01.10.2015)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 *********************************************/
-
 (function($) {
-
 var _R = jQuery.fn.revolution,
 	_ISM = _R.is_mobile();
 
@@ -186,10 +184,11 @@ jQuery.extend(true,_R, {
 		var ifr = nextcaption.find('iframe, video'),
 			wa = asprat.split(':')[0],
 			ha = asprat.split(':')[1],
-			od = opt.width/opt.height,															
+			li = nextcaption.closest('.tp-revslider-slidesli'),
+			od = li.width()/li.height(),
 			vd = wa/ha,
 			nvh = (od/vd)*100,
-			nvw = (vd/od)*100;					
+			nvw = (vd/od)*100;			
 		if (od>vd) 																
 			punchgs.TweenLite.to(ifr,0.001,{height:nvh+"%", width:"100%", top:-(nvh-100)/2+"%",left:"0px",position:"absolute"});
 		else 
@@ -246,6 +245,7 @@ jQuery.extend(true,_R, {
 			videomp = _nc.data('videomp4'),
 			videowebm = _nc.data('videowebm'),
 			videoogv = _nc.data('videoogv'),
+			videoafs = _nc.data('allowfullscreenvideo'),
 			videocontrols = _nc.data('videocontrols'),
 			httpprefix = "http",
 			videoloop = _nc.data('videoloop')=="loop" ? "loop" : _nc.data('videoloop')=="loopandnoslidestop" ? "loop" : "",
@@ -268,17 +268,19 @@ jQuery.extend(true,_R, {
 				if (videomp!=undefined) apptxt = apptxt + '<source src="'+videomp+'" type="video/mp4" />';
 				if (videoogv!=undefined) apptxt = apptxt + '<source src="'+videoogv+'" type="video/ogg" />';
 				apptxt = apptxt + '</video>';
-				
+				var hfm ="";
+				if (videoafs==="true" ||  videoafs===true)
+					hfm = '<div class="tp-video-button-wrap"><button  type="button" class="tp-video-button tp-vid-full-screen">Full-Screen</button></div>';
 
 				if (videocontrols=="controls")
 					apptxt = apptxt + ('<div class="tp-video-controls">'+
-											'<div class="tp-video-button-wrap"><button type="button" class="tp-video-button tp-vid-play-pause">Play</button></div>'+
-											'<div class="tp-video-seek-bar-wrap"><input  type="range" class="tp-seek-bar" value="0"></div>'+
-											'<div class="tp-video-button-wrap"><button  type="button" class="tp-video-button tp-vid-mute">Mute</button></div>'+
-											'<div class="tp-video-vol-bar-wrap"><input  type="range" class="tp-volume-bar" min="0" max="1" step="0.1" value="1"></div>'+
-											'<div class="tp-video-button-wrap"><button  type="button" class="tp-video-button tp-vid-full-screen">Full-Screen</button></div>'+
-										'</div>');
-
+										  '<div class="tp-video-button-wrap"><button type="button" class="tp-video-button tp-vid-play-pause">Play</button></div>'+
+										  '<div class="tp-video-seek-bar-wrap"><input  type="range" class="tp-seek-bar" value="0"></div>'+
+										  '<div class="tp-video-button-wrap"><button  type="button" class="tp-video-button tp-vid-mute">Mute</button></div>'+
+										  '<div class="tp-video-vol-bar-wrap"><input  type="range" class="tp-volume-bar" min="0" max="1" step="0.1" value="1"></div>'+
+										  hfm+
+										  '</div>');
+				
 				_nc.data('videomarkup',apptxt)
 				_nc.append(apptxt);
 
@@ -317,21 +319,36 @@ jQuery.extend(true,_R, {
 							 	
 			 	if (s!=-1) vida=vida+"&start="+s;
 			 	if (e!=-1) vida=vida+"&end="+e;
+
+				// CHECK VIDEO ORIGIN, AND EXTEND WITH WWW IN CASE IT IS MISSING !
+			 	var orig = vida.split('origin='+httpprefix+'://'),
+			 		vida_new = "";
+			 				 	
+			 	if (orig.length>1) {
+			 		vida_new = orig[0]+'origin='+httpprefix+'://';
+			 		if (self.location.href.match(/www/gi) && !orig[1].match(/www/gi)) 						 	 						 		
+			 				vida_new=vida_new+"www."
+			 		vida_new=vida_new+orig[1];
+			 	} else {
+			 		vida_new = vida;
+			 	}	
 			 	
-			 	
-			 	_nc.data('videomarkup','<iframe style="visible:hidden" src="'+httpprefix+'://www.youtube.com/embed/'+vidytid+'?'+vida+'" width="100%" height="100%" style="width:100%;height:100%"></iframe>');
+			 	var yafv = videoafs==="true" ||  videoafs===true ? "allowfullscreen" : "";		 	
+			 	_nc.data('videomarkup','<iframe style="visible:hidden" src="'+httpprefix+'://www.youtube.com/embed/'+vidytid+'?'+vida_new+'" '+yafv+' width="100%" height="100%" style="width:100%;height:100%"></iframe>');
 			break;
 
 			case "vimeo":
 				if (location.protocol === 'https:')
-					httpprefix = "https";
+					httpprefix = "https";				
 				_nc.data('videomarkup','<iframe style="visible:hidden" src="'+httpprefix+'://player.vimeo.com/video/'+vimeoid+'?'+vida+'" width="100%" height="100%" style="100%;height:100%"></iframe>');
 			break;
 		}
 		
 		//if (videotype=="vimeo" || videotype=="youtube") {
 		// IF VIDEOPOSTER EXISTING
-		if (_nc.data('videoposter')!=undefined && _nc.data('videoposter').length>2) {
+		var posteronlyonmobile = (_ISM!=true && (_nc.data('posterOnMobile')!="on" && _nc.data('posteronmobile')!="on")) || _ISM;
+		
+		if (_nc.data('videoposter')!=undefined && _nc.data('videoposter').length>2 && posteronlyonmobile) {
 			if (_nc.find('.tp-videoposter').length==0)
 				_nc.append('<div class="tp-videoposter noSwipe" style="cursor:pointer; position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:3;background-image:url('+_nc.data('videoposter')+'); background-size:cover;background-position:center center;"></div>');				
 			if (_nc.find('iframe').length==0)
@@ -449,9 +466,10 @@ var addVideoListener = function(_nc,opt,startnow) {
 								opt.c.trigger('revolution.slide.onvideoplay',getVideoDatas(player,"youtube",_nc.data()));													
 							} else {							
 								if (event.data==0 && loop) {
-									player.playVideo();
+									//player.playVideo();
 									var s = getStartSec(_nc.data('videostartat'));
-									if (s!=-1) player.seekTo(s);									
+									if (s!=-1) player.seekTo(s);
+									player.playVideo();									
 								}
 								if ((event.data==0 || event.data==2) && _nc.data('showcoveronpause')=="on" && _nc.find('.tp-videoposter').length>0) {										
 									punchgs.TweenLite.to(_nc.find('.tp-videoposter'),0.3,{autoAlpha:1,force3D:"auto",ease:punchgs.Power3.easeInOut});
@@ -704,15 +722,16 @@ var htmlvideoevents = function(_nc,opt,startnow) {
 		});
 
 		// Event listener for the full-screen button
-		addEvent(fullScreenButton,"click", function() {
-			if (video.requestFullscreen) {
-				video.requestFullscreen();
-			} else if (video.mozRequestFullScreen) {
-				video.mozRequestFullScreen(); // Firefox
-			} else if (video.webkitRequestFullscreen) {
-				video.webkitRequestFullscreen(); // Chrome and Safari
-			}
-		});
+		if (fullScreenButton)
+			addEvent(fullScreenButton,"click", function() {
+				if (video.requestFullscreen) {
+					video.requestFullscreen();
+				} else if (video.mozRequestFullScreen) {
+					video.mozRequestFullScreen(); // Firefox
+				} else if (video.webkitRequestFullscreen) {
+					video.webkitRequestFullscreen(); // Chrome and Safari
+				}
+			});
 
 
 		// Event listener for the seek bar

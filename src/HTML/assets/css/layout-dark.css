@@ -808,8 +808,8 @@ section.dark .sp-replacer {
 *************************************************** **/
 .page-header {
 	color:#fff;
-	background-color:#151515;
-	border-bottom-color:#666;
+	background-color:#151515 !important;
+	border-bottom-color:#333 !important;
 }
 .page-header ul.page-header-tabs>li.active {
 	background-color: #111;
@@ -900,7 +900,9 @@ div.alert.alert-dark *,
 div.alert.alert-theme-color * {
 	color:#fff !important
 }
-
+.alert.alert-transparent {
+	background-color:#212121;
+}
 
 
 /**	[Shortcode] Counters

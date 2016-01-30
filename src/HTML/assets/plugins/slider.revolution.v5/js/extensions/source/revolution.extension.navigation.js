@@ -1,7 +1,6 @@
-
 /********************************************
  * REVOLUTION 5.0 EXTENSION - NAVIGATION
- * @version: 1.0.2 (18.08.2015)
+ * @version: 1.0.3 (25.09.2015)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 *********************************************/
@@ -371,10 +370,12 @@ var initKeyboard = function(container,opt) {
 	jQuery(document).keydown(function(e){
 		if ((opt.navigation.keyboard_direction=="horizontal" && e.keyCode == 39) || (opt.navigation.keyboard_direction=="vertical" && e.keyCode==40)) {
 			opt.sc_indicator="arrow";
+			opt.sc_indicator_dir = 0;
 			_R.callingNewSlide(opt,container,1);					
 		}
 		if ((opt.navigation.keyboard_direction=="horizontal" && e.keyCode == 37) || (opt.navigation.keyboard_direction=="vertical" && e.keyCode==38)) {
 			opt.sc_indicator="arrow";
+			opt.sc_indicator_dir = 1;
 			_R.callingNewSlide(opt,container,-1);									
 		}
 	});		
@@ -396,6 +397,7 @@ var initMouseScroll = function(container,opt) {
 			if(res.pixelY<bl) {			 
 				if (!fs) {
 					opt.sc_indicator="arrow";
+					opt.sc_indicator_dir = 0;
 					_R.callingNewSlide(opt,container,-1);																		
 					return false;			 
 				}
@@ -404,6 +406,7 @@ var initMouseScroll = function(container,opt) {
 			 if(res.pixelY>tl) {				 
 			 	if (!ls) {
 				 	opt.sc_indicator="arrow";
+				 	opt.sc_indicator_dir = 1;
 					_R.callingNewSlide(opt,container,1);								 
 					return false;
 				}
@@ -605,10 +608,12 @@ var swipeAction = function(container,opt,vertical) {
 				opt.sc_indicator="arrow";	
 				
 				if ((swipe_wait_dir=="horizontal" && direction == "left") || (swipe_wait_dir=="vertical" && direction == "up")) {
+					opt.sc_indicator_dir = 0;
 					_R.callingNewSlide(opt,opt.c,1);
 					return false;
 				}
 				if ((swipe_wait_dir=="horizontal" && direction == "right") || (swipe_wait_dir=="vertical" && direction == "down")) {
+					opt.sc_indicator_dir = 1;
 					_R.callingNewSlide(opt,opt.c,-1);	
 					return false;
 				}
@@ -684,8 +689,8 @@ var initArrows = function(container,o,opt) {
 	var la = container.find('.tp-leftarrow.tparrows'),
 		ra = container.find('.tp-rightarrow.tparrows');
 	// CLICK HANDLINGS ON LEFT AND RIGHT ARROWS
-	ra.click(function() { opt.sc_indicator="arrow"; container.revnext();});
-	la.click(function() { opt.sc_indicator="arrow"; container.revprev();});
+	ra.click(function() { opt.sc_indicator="arrow"; opt.sc_indicator_dir = 0;container.revnext();});
+	la.click(function() { opt.sc_indicator="arrow"; opt.sc_indicator_dir = 1;container.revprev();});
 	
 	// SHORTCUTS
 	o.right.j = container.find('.tp-rightarrow.tparrows');

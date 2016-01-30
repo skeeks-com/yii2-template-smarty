@@ -1,13 +1,14 @@
 /********************************************
  * REVOLUTION 5.0 EXTENSION - LAYER ANIMATION
- * @version: 1.1.1 (07.09.2015)
+ * @version: 1.1.5 (23.10.2015)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 *********************************************/
 
 (function($) {
 
-var _R = jQuery.fn.revolution;
+var _R = jQuery.fn.revolution,
+	_ISM = _R.is_mobile();
 
 ///////////////////////////////////////////
 // 	EXTENDED FUNCTIONS AVAILABLE GLOBAL  //
@@ -168,8 +169,10 @@ jQuery.extend(true,_R, {
 
 			
 		var handlecaption=0,
-			layervisible =  makeArray(_nc.data('visibility'),opt)[opt.curWinRange] || makeArray(_nc.data('visibility'),opt) || "on";
+			layervisible =  makeArray(_nc.data('visibility'),opt)[opt.forcedWinRange] || makeArray(_nc.data('visibility'),opt) || "on";
 		
+		
+
 		// HIDE CAPTION IF RESOLUTION IS TOO LOW			
 		if (layervisible=="off" || (_gw<opt.hideCaptionAtLimit && _nc.data('captionhidden')=="on") || (_gw<opt.hideAllCaptionAtLimit)) 
 			_nc.addClass("tp-hidden-caption");											
@@ -187,8 +190,7 @@ jQuery.extend(true,_R, {
 				_nc.data('videoposter',_nc.data('thumbimage'))
 				
 		// FALL BACK TO NORMAL IMAGE IF NO VIDEO SHOULD BE PLAYED ON MOBILE DEVICES
-		if (_nc.hasClass("tp-videolayer") &&  _nc.data('videoposter')!=undefined && _nc.data('posterOnMobile')=="on" && _ISM) {
-
+		if (_nc.hasClass("tp-videolayer") &&  _nc.data('videoposter')!=undefined && (_nc.data('posterOnMobile')=="on"  || _nc.data('posteronmobile')=="on") && _ISM) {			
 			var vidw =  makeArray(_nc.data('videowidth'),opt)[opt.curWinRange] || makeArray(_nc.data('videowidth'),opt) || "auto",
 				vidh =  makeArray(_nc.data('videoheight'),opt)[opt.curWinRange] || makeArray(_nc.data('videoheight'),opt) || "auto";					
 			
@@ -540,8 +542,7 @@ jQuery.extend(true,_R, {
 				if (hashover) {
 
 					$hover = getAnimDatas($hover,_nc.data('transform_hover'));
-					$hover = convertHoverStyle($hover,_nc.data('style_hover'));
-
+					$hover = convertHoverStyle($hover,_nc.data('style_hover'));					
 					_nc.data('hover',$hover);
 				}
 			
@@ -562,9 +563,10 @@ jQuery.extend(true,_R, {
 					 		
 					 	if (intl && intl.progress()==1) {						 		
 
-						 	if (nc.data('newhoveranim')===undefined || 	nc.data('newhoveranim')==="none")						 		
+						 	if (nc.data('newhoveranim')===undefined || 	nc.data('newhoveranim')==="none")	{						 		
 						 		nc.data('newhoveranim',punchgs.TweenLite.to(nc,t.speed,t.anim));						 	
-						 	else {						 		
+
+						 	} else {						 		
 						 		nc.data('newhoveranim').progress(0);
 						 		nc.data('newhoveranim').play();
 						 	}
@@ -1197,7 +1199,7 @@ var getcssParams = function(nc,level) {
 							 "border-right-width",
 							 "border-bottom-width",
 							 "border-top-width",							 
-							 "color",							 
+						//	 "color",							 
 							 "text-decoration",
 							 "font-style",
 							 "border-radius"]);		 

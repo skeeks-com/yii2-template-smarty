@@ -1,6 +1,6 @@
 /********************************************
  * REVOLUTION 5.0 EXTENSION - ACTIONS
- * @version: 1.0.2 (18.08.2015)
+ * @version: 1.0.4 (29.09.2015)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 *********************************************/
@@ -90,7 +90,8 @@ if (as)
 					case "simplelink":						
 						window.open(a.url,a.target);
 					break;
-					case "toggleslider":								
+					case "toggleslider":
+						opt.noloopanymore=0;								
 						if (opt.sliderstatus=="playing")
 							opt.c.revpause();
 						else
@@ -99,7 +100,8 @@ if (as)
 					case "pauseslider":								
 						opt.c.revpause();								
 					break;
-					case "playslider":								
+					case "playslider":			
+						opt.noloopanymore=0;					
 						opt.c.revresume();								
 					break;
 					case "playvideo":							
@@ -127,6 +129,42 @@ if (as)
 								tnc.addClass(a.classname);
 							else
 								tnc.removeClass(a.classname);									
+					break;
+					case "gofullscreen":
+					case "exitfullscreen":
+					case "togglefullscreen":
+						
+						if (jQuery('#rs-go-fullscreen').length>0 && (a.action=="togglefullscreen" || a.action=="exitfullscreen")) {
+							jQuery('#rs-go-fullscreen').appendTo(jQuery('#rs-was-here'));
+							var paw = opt.c.closest('.forcefullwidth_wrapper_tp_banner').length>0 ? opt.c.closest('.forcefullwidth_wrapper_tp_banner') : opt.c.closest('.rev_slider_wrapper');
+							paw.unwrap();
+							paw.unwrap();
+							opt.minHeight  = opt.oldminheight;
+							opt.infullscreenmode = false;
+							opt.c.revredraw();	
+							if (opt.playingvideos != undefined && opt.playingvideos.length>0) {			
+								jQuery.each(opt.playingvideos,function(i,_nc) {									
+									_R.playVideo(_nc,opt);
+								});
+							}
+
+						} else 
+						if (jQuery('#rs-go-fullscreen').length==0 && (a.action=="togglefullscreen" || a.action=="gofullscreen")) {
+							var paw = opt.c.closest('.forcefullwidth_wrapper_tp_banner').length>0 ? opt.c.closest('.forcefullwidth_wrapper_tp_banner') : opt.c.closest('.rev_slider_wrapper');
+							paw.wrap('<div id="rs-was-here"><div id="rs-go-fullscreen"></div></div>');
+							var gf = jQuery('#rs-go-fullscreen');
+							gf.appendTo(jQuery('body'));
+							gf.css({position:'fixed',width:'100%',height:'100%',top:'0px',left:'0px',zIndex:'9999999',background:'#ffffff'});
+							opt.oldminheight = opt.minHeight;
+							opt.minHeight = jQuery(window).height();							
+							opt.infullscreenmode = true;
+							opt.c.revredraw();	
+							if (opt.playingvideos != undefined && opt.playingvideos.length>0) {			
+								jQuery.each(opt.playingvideos,function(i,_nc) {									
+									_R.playVideo(_nc,opt);
+								});
+							}
+						}						
 					break;
 				}
 			},[tnc,opt,a,_nc]);

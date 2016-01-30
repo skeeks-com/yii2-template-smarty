@@ -7,6 +7,7 @@ textarea {
 }
 
 
+
 /** Commons
  **************************************************************** **/
 ul>li>i { 
@@ -138,8 +139,8 @@ img.pull-right {
 			right:auto;
 		}
 	body.menu-vertical #mainMenu.sidebar-vertical li.dropdown:hover>ul.dropdown-menu {
-		left:auto;
-		right:-230px;
+		left:-230px;
+		right:auto;
 	}
 		body.menu-vertical.menu-inverse #mainMenu.sidebar-vertical li.dropdown:hover>ul.dropdown-menu {
 			right:-230px;
@@ -1078,11 +1079,12 @@ ul.portfolio-detail-list span>i {
 
 /**	[Shortcode] Alerts
 *************************************************** **/
-.alert {
-	border-left:0;
-	border-right: rgba(0,0,0,0.1) 5px solid;
+div.alert {
+	border-left-width: 1px;
+	border-right-width: 5px;
+	border-right-color: rgba(0,0,0,0.1);
+	border-left-color: rgba(0,0,0,0.1);
 }
-
 
 
 /**	[Shortcode] Buttons
@@ -1225,8 +1227,26 @@ div.owl-carousel.owl-mini-testimonial .owl-controls {
   margin: 10px 20px 0 0;
 }
 
+.sky-form, .sky-form .label {
+	text-align:right;
+}
 
 
+
+/**	[essentials.css] Social Buttons
+**************************************************************** **/
+.btn-social {
+	text-align:right;
+	padding-left:0;
+	padding-right:54px;
+}
+.btn-social>:first-child {
+	left:auto;
+	right:0;
+
+	border-right:0;
+	border-left: 1px solid rgba(0,0,0,0.2);
+}
 
 
 /** Thematics [layout-thematics.css]

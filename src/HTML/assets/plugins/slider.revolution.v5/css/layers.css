@@ -3100,3 +3100,662 @@ website:   	http://www.themepunch.com
     border-radius: 0px;
 }
 
+.tp-caption.Twitter-Content a,
+    .tp-caption.Twitter-Content a:visited {
+        color: #0084B4 !important
+    }
+    .tp-caption.Twitter-Content a:hover {
+        color: #0084B4 !important;
+        text-decoration: underline !important
+    }
+    .tp-caption.Concept-Title,
+    .Concept-Title {
+        color: rgba(255, 255, 255, 1.00);
+        font-size: 70px;
+        line-height: 70px;
+        font-weight: 700;
+        font-style: normal;
+        font-family: Roboto Condensed;
+        padding: 0px 0px 10px 0px;
+        text-decoration: none;
+        text-align: left;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0px 0px 0px 0px;
+        letter-spacing: 5px
+    }
+    .tp-caption.Concept-SubTitle,
+    .Concept-SubTitle {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 25px;
+        line-height: 25px;
+        font-weight: 700;
+        font-style: italic;
+        font-family: Playfair Display;
+        padding: 0px 0px 10px 0px;
+        text-decoration: none;
+        text-align: left;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .tp-caption.Concept-Content,
+    .Concept-Content {
+        color: rgba(255, 255, 255, 1.00);
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Roboto Condensed;
+        padding: 0px 0px 0px 0px;
+        text-decoration: none;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(255, 255, 255, 1.00);
+        border-style: none;
+        border-width: 2px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .tp-caption.Concept-MoreBtn,
+    .Concept-MoreBtn {
+        color: rgba(255, 255, 255, 1.00);
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 300;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 10px 8px 7px 10px;
+        text-decoration: none;
+        text-align: left;
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0);
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 50px 50px 50px 50px;
+        letter-spacing: 1px;
+        text-align: left
+    }
+    .tp-caption.Concept-MoreBtn:hover,
+    .Concept-MoreBtn:hover {
+        color: rgba(255, 255, 255, 1.00);
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0);
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 50px 50px 50px 50px
+    }
+    .tp-caption.Concept-LessBtn,
+    .Concept-LessBtn {
+        color: rgba(255, 255, 255, 1.00);
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 300;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 10px 8px 7px 10px;
+        text-decoration: none;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 1.00);
+        border-color: rgba(255, 255, 255, 0);
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 50px 50px 50px 50px;
+        letter-spacing: 1px;
+        text-align: left
+    }
+    .tp-caption.Concept-LessBtn:hover,
+    .Concept-LessBtn:hover {
+        color: rgba(0, 0, 0, 1.00);
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 1.00);
+        border-color: rgba(255, 255, 255, 0);
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 50px 50px 50px 50px
+    }
+    .tp-caption.Concept-SubTitle-Dark,
+    .Concept-SubTitle-Dark {
+        color: rgba(0, 0, 0, 0.65);
+        font-size: 25px;
+        line-height: 25px;
+        font-weight: 700;
+        font-style: italic;
+        font-family: Playfair Display;
+        padding: 0px 0px 10px 0px;
+        text-decoration: none;
+        text-align: left;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .tp-caption.Concept-Title-Dark,
+    .Concept-Title-Dark {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 70px;
+        line-height: 70px;
+        font-weight: 700;
+        font-style: normal;
+        font-family: Roboto Condensed;
+        padding: 0px 0px 10px 0px;
+        text-decoration: none;
+        text-align: center;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0px 0px 0px 0px;
+        letter-spacing: 5px
+    }
+    .tp-caption.Concept-MoreBtn-Dark,
+    .Concept-MoreBtn-Dark {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 300;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 10px 8px 7px 10px;
+        text-decoration: none;
+        text-align: left;
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0);
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 50px 50px 50px 50px;
+        letter-spacing: 1px;
+        text-align: left
+    }
+    .tp-caption.Concept-MoreBtn-Dark:hover,
+    .Concept-MoreBtn-Dark:hover {
+        color: rgba(255, 255, 255, 1.00);
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 1.00);
+        border-color: rgba(255, 255, 255, 0);
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 50px 50px 50px 50px
+    }
+    .tp-caption.Concept-Content-Dark,
+    .Concept-Content-Dark {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Roboto Condensed;
+        padding: 0px 0px 0px 0px;
+        text-decoration: none;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(255, 255, 255, 1.00);
+        border-style: none;
+        border-width: 2px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .tp-caption.Concept-Notice,
+    .Concept-Notice {
+        color: rgba(255, 255, 255, 1.00);
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Roboto Condensed;
+        padding: 0px 0px 0px 0px;
+        text-decoration: none;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(255, 255, 255, 1.00);
+        border-style: none;
+        border-width: 2px;
+        border-radius: 0px 0px 0px 0px;
+        letter-spacing: 2px
+    }
+    .tp-caption.Concept-Content a,
+    .tp-caption.Concept-Content a:visited {
+        color: #fff !important;
+        border-bottom: 1px solid #fff !important;
+        font-weight: 700 !important;
+    }
+    .tp-caption.Concept-Content a:hover {
+        border-bottom: 1px solid transparent !important;
+    }
+    .tp-caption.Concept-Content-Dark a,
+    .tp-caption.Concept-Content-Dark a:visited {
+        color: #000 !important;
+        border-bottom: 1px solid #000 !important;
+        font-weight: 700 !important;
+    }
+    .tp-caption.Concept-Content-Dark a:hover {
+        border-bottom: 1px solid transparent !important;
+    }
+
+    .tp-caption.Twitter-Content a,
+    .tp-caption.Twitter-Content a:visited {
+        color: #0084B4 !important
+    }
+    .tp-caption.Twitter-Content a:hover {
+        color: #0084B4 !important;
+        text-decoration: underline !important
+    }
+    .tp-caption.Creative-Title,
+    .Creative-Title {
+        color: rgba(255, 255, 255, 1.00);
+        font-size: 70px;
+        line-height: 70px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Playfair Display;
+        padding: 0px 0px 0px 0px;
+        text-decoration: none;
+        text-align: center;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .tp-caption.Creative-SubTitle,
+    .Creative-SubTitle {
+        color: rgba(205, 176, 131, 1.00);
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Lato;
+        padding: 0px 0px 0px 0px;
+        text-decoration: none;
+        text-align: center;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0px 0px 0px 0px;
+        letter-spacing: 2px
+    }
+    .tp-caption.Creative-Button,
+    .Creative-Button {
+        color: rgba(205, 176, 131, 1.00);
+        font-size: 13px;
+        line-height: 13px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Lato;
+        padding: 15px 50px 15px 50px;
+        text-decoration: none;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(205, 176, 131, 0.25);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 0px 0px 0px 0px;
+        letter-spacing: 2px
+    }
+    .tp-caption.Creative-Button:hover,
+    .Creative-Button:hover {
+        color: rgba(205, 176, 131, 1.00);
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(205, 176, 131, 1.00);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 0px 0px 0px 0px
+    }
+
+.tp-caption.subcaption,
+    .subcaption {
+        color: rgba(111, 124, 130, 1.00);
+        font-size: 19px;
+        line-height: 24px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: roboto;
+        padding: 0 0 0 0px;
+        text-decoration: none;
+        background-color: transparent;
+        border-color: rgba(0, 0, 0, 1.00);
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0 0 0 0px;
+        text-shadow: none;
+        text-align: left
+    }
+    .tp-caption.RedDot,
+    .RedDot {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: px;
+        line-height: px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: ;
+        padding: 0px 0px 0px 0px;
+        text-decoration: none;
+        text-align: left;
+        background-color: rgba(213, 0, 0, 1.00);
+        border-color: rgba(255, 255, 255, 1.00);
+        border-style: solid;
+        border-width: 5px;
+        border-radius: 50px 50px 50px 50px
+    }
+    .tp-caption.RedDot:hover,
+    .RedDot:hover {
+        color: rgba(0, 0, 0, 1.00);
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.75);
+        border-color: rgba(213, 0, 0, 1.00);
+        border-style: solid;
+        border-width: 5px;
+        border-radius: 50px 50px 50px 50px
+    }
+
+    .tp-caption.SlidingOverlays-Title,
+    .SlidingOverlays-Title {
+        color: rgba(255, 255, 255, 1.00);
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Playfair Display;
+        padding: 0px 0px 0px 0px;
+        text-decoration: none;
+        text-align: left;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0px 0px 0px 0px
+    }
+    .tp-caption.SlidingOverlays-Title,
+    .SlidingOverlays-Title {
+        color: rgba(255, 255, 255, 1.00);
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Playfair Display;
+        padding: 0px 0px 0px 0px;
+        text-decoration: none;
+        text-align: left;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0px 0px 0px 0px
+    }
+
+     .tp-caption.Woo-TitleLarge,
+    .Woo-TitleLarge {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Playfair Display;
+        padding: 0 0 0 0px;
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0 0 0 0px;
+        text-align: center;
+        type: text
+    }
+    .tp-caption.Woo-Rating,
+    .Woo-Rating {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 300;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 0 0 0 0px;
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0 0 0 0px;
+        text-align: left;
+        type: text
+    }
+    .tp-caption.Woo-SubTitle,
+    .Woo-SubTitle {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 300;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 0 0 0 0px;
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0 0 0 0px;
+        text-align: center;
+        letter-spacing: 2px;
+        type: text
+    }
+    .tp-caption.Woo-PriceLarge,
+    .Woo-PriceLarge {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 60px;
+        line-height: 60px;
+        font-weight: 700;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 0 0 0 0px;
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0 0 0 0px;
+        text-align: center;
+        type: text
+    }
+    .tp-caption.Woo-ProductInfo,
+    .Woo-ProductInfo {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 500;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 12px 75px 12px 50px;
+        text-decoration: none;
+        background-color: rgba(254, 207, 114, 1.00);
+        border-color: rgba(0, 0, 0, 1.00);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px 4px 4px 4px;
+        text-align: left;
+        type: button
+    }
+    .tp-caption.Woo-ProductInfo:hover,
+    .Woo-ProductInfo:hover {
+        color: rgba(0, 0, 0, 1.00);
+        text-decoration: none;
+        background-color: rgba(243, 168, 71, 1.00);
+        border-color: rgba(0, 0, 0, 1.00);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px 4px 4px 4px
+    }
+    .tp-caption.Woo-AddToCart,
+    .Woo-AddToCart {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 500;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 12px 35px 12px 35px;
+        text-decoration: none;
+        background-color: rgba(254, 207, 114, 1.00);
+        border-color: rgba(0, 0, 0, 1.00);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px 4px 4px 4px;
+        text-align: left;
+        type: button
+    }
+    .tp-caption.Woo-AddToCart:hover,
+    .Woo-AddToCart:hover {
+        color: rgba(0, 0, 0, 1.00);
+        text-decoration: none;
+        background-color: rgba(243, 168, 71, 1.00);
+        border-color: rgba(0, 0, 0, 1.00);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px 4px 4px 4px
+    }
+    .tp-caption.Woo-TitleLarge,
+    .Woo-TitleLarge {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Playfair Display;
+        padding: 0 0 0 0px;
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0 0 0 0px;
+        text-align: center;
+        type: text
+    }
+    .tp-caption.Woo-SubTitle,
+    .Woo-SubTitle {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 300;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 0 0 0 0px;
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0 0 0 0px;
+        text-align: center;
+        letter-spacing: 2px;
+        type: text
+    }
+    .tp-caption.Woo-PriceLarge,
+    .Woo-PriceLarge {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 60px;
+        line-height: 60px;
+        font-weight: 700;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 0 0 0 0px;
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0px;
+        border-radius: 0 0 0 0px;
+        text-align: center;
+        type: text
+    }
+    .tp-caption.Woo-ProductInfo,
+    .Woo-ProductInfo {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 500;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 12px 75px 12px 50px;
+        text-decoration: none;
+        background-color: rgba(254, 207, 114, 1.00);
+        border-color: rgba(0, 0, 0, 1.00);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px 4px 4px 4px;
+        text-align: left;
+        type: button
+    }
+    .tp-caption.Woo-ProductInfo:hover,
+    .Woo-ProductInfo:hover {
+        color: rgba(0, 0, 0, 1.00);
+        text-decoration: none;
+        background-color: rgba(243, 168, 71, 1.00);
+        border-color: rgba(0, 0, 0, 1.00);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px 4px 4px 4px
+    }
+    .tp-caption.Woo-AddToCart,
+    .Woo-AddToCart {
+        color: rgba(0, 0, 0, 1.00);
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 500;
+        font-style: normal;
+        font-family: Roboto;
+        padding: 12px 35px 12px 35px;
+        text-decoration: none;
+        background-color: rgba(254, 207, 114, 1.00);
+        border-color: rgba(0, 0, 0, 1.00);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px 4px 4px 4px;
+        text-align: left;
+        type: button
+    }
+    .tp-caption.Woo-AddToCart:hover,
+    .Woo-AddToCart:hover {
+        color: rgba(0, 0, 0, 1.00);
+        text-decoration: none;
+        background-color: rgba(243, 168, 71, 1.00);
+        border-color: rgba(0, 0, 0, 1.00);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px 4px 4px 4px
+    }
+
+    .tp-caption.FullScreen-Toggle,
+    .FullScreen-Toggle {
+        color: rgba(255, 255, 255, 1.00);
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: Raleway;
+        padding: 11px 8px 11px 12px;
+        text-decoration: none;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.50);
+        border-color: rgba(255, 255, 255, 0);
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 0px 0px 0px 0px;
+        letter-spacing: 3px;
+        text-align: left
+    }
+    .tp-caption.FullScreen-Toggle:hover,
+    .FullScreen-Toggle:hover {
+        color: rgba(255, 255, 255, 1.00);
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 1.00);
+        border-color: rgba(255, 255, 255, 0);
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 0px 0px 0px 0px
+    }

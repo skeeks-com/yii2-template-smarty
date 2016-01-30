@@ -579,6 +579,9 @@ ul>li>i				{ margin-right:10px; 	}
 .line-through		{ text-decoration: line-through; }
 .btn>i 				{ padding-right:6px; 	}
 video.fullvideo 		{ width:100%; height:100%; }
+.nortl				{ direction: ltr;		}
+.rtl				{ direction: rtl;		}
+.ltr				{ direction: ltr;		}
 
 /* borders */
 .border-top-1 {
@@ -1725,7 +1728,7 @@ section .nav-pills>li>a:focus,
 section .nav-pills>li.active>a, 
 section .nav-pills>li.active>a:hover, 
 section .nav-pills>li.active>a:focus {
-	background-color:rgba(0,0,0,0.05) !important;
+	background-color:rgba(0,0,0,0.1) !important;
 }
 section .nav-pills>li>a {
 	padding:6px 15px;
